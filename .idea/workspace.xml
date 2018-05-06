@@ -2,71 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/sample/Dark.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/Generic.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/Controller2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/Darkest_imports.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Darkest Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Darkest Project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/Darkest photos/Abomination.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Darkest Project/images/Abomination.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/Darkest photos/Antiquarian.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Darkest Project/images/Antiquarian.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/Darkest photos/Arbalest.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Darkest Project/images/Arbalest.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/Darkest photos/Bounty_Hunter.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Darkest Project/images/Bounty_Hunter.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/Darkest photos/Crusader.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Darkest Project/images/Crusader.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/Darkest photos/Darkest_Dungeon.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Darkest Project/images/Darkest_Dungeon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/Darkest photos/Flagellant.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Darkest Project/images/Flagellant.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/Darkest photos/Grave_robber.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Darkest Project/images/Grave_robber.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/Darkest photos/Hellion.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Darkest Project/images/Hellion.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/Darkest photos/Highwayman.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Darkest Project/images/Highwayman.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/Darkest photos/Hound_master.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Darkest Project/images/Hound_master.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/Darkest photos/Jester.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Darkest Project/images/Jester.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/Darkest photos/Leper.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Darkest Project/images/Leper.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/Darkest photos/Man-at-arms.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Darkest Project/images/Man-at-arms.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/Darkest photos/Occultist.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Darkest Project/images/Occultist.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/Darkest photos/Plague_doctor.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Darkest Project/images/Plague_doctor.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/Darkest photos/Shieldbreaker.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Darkest Project/images/Shieldbreaker.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/Darkest photos/Vestal.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Darkest Project/images/Vestal.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/sample/Darkest project.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/sample/Darkest_project.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Darkest Project/sample/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/sample/Generic.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Darkest Project/sample/Generic.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Darkest Project/sample/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/Darkest photos/Abomination.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Abomination.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/Darkest photos/Antiquarian.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Antiquarian.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/Darkest photos/Arbalest.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Arbalest.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/Darkest photos/Bounty_Hunter.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Bounty_Hunter.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/Darkest photos/Crusader.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Crusader.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/Darkest photos/Darkest_Dungeon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Darkest_Dungeon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/Darkest photos/Flagellant.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Flagellant.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/Darkest photos/Grave_robber.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Grave_robber.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/Darkest photos/Hellion.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Hellion.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/Darkest photos/Highwayman.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Highwayman.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/Darkest photos/Hound_master.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Hound_master.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/Darkest photos/Jester.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Jester.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/Darkest photos/Leper.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Leper.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/Darkest photos/Man-at-arms.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Man-at-arms.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/Darkest photos/Occultist.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Occultist.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/Darkest photos/Plague_doctor.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Plague_doctor.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/Darkest photos/Shieldbreaker.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Shieldbreaker.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/Darkest photos/Vestal.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Vestal.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/sample/Darkest project.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/Darkest photos/Abomination.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/Darkest photos/Antiquarian.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/Darkest photos/Arbalest.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/Darkest photos/Bounty_Hunter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/Darkest photos/Crusader.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/Darkest photos/Darkest_Dungeon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/Darkest photos/Flagellant.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/Darkest photos/Grave_robber.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/Darkest photos/Hellion.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/Darkest photos/Highwayman.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/Darkest photos/Hound_master.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/Darkest photos/Jester.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/Darkest photos/Leper.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/Darkest photos/Man-at-arms.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/Darkest photos/Occultist.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/Darkest photos/Plague_doctor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/Darkest photos/Shieldbreaker.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/Darkest photos/Vestal.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Darkest project.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Dark.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Dark.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Generic.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Generic.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -125,11 +69,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5537">
-              <caret line="219" column="5" selection-start-line="219" selection-start-column="5" selection-end-line="219" selection-end-column="5" />
+            <state relative-caret-position="456">
+              <caret line="34" column="33" lean-forward="true" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -137,11 +81,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="53" column="47" selection-start-line="53" selection-start-column="47" selection-end-line="53" selection-end-column="47" />
+            <state relative-caret-position="102">
+              <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller2.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Controller2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Darkest_imports.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Darkest_imports.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -151,19 +119,15 @@
       </file>
       <file leaf-file-name="Generic.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Generic.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2387">
-              <caret line="18" column="87" selection-start-line="18" selection-start-column="87" selection-end-line="18" selection-end-column="87" />
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
           <provider editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
       <file leaf-file-name="Dark.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Dark.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="178" lean-forward="true" selection-start-line="10" selection-start-column="178" selection-end-line="10" selection-end-column="211" />
+            <state relative-caret-position="357">
+              <caret line="200" lean-forward="true" selection-start-line="200" selection-end-line="200" />
             </state>
           </provider>
           <provider editor-type-id="JavaFX-Scene-Builder" />
@@ -171,13 +135,25 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>Projects/darkest%20Project/src</find>
       <find>&lt;image&gt;</find>
+      <find>main</find>
+      <find>private</find>
+      <find>showcustomer</find>
     </findStrings>
     <replaceStrings>
       <replace>..</replace>
+      <replace>Darkest_imports</replace>
+      <replace>public</replace>
     </replaceStrings>
   </component>
   <component name="FindManager">
@@ -188,6 +164,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/sample/Dark.fxml" root0="SKIP_INSPECTION" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -195,10 +174,12 @@
         <option value="$PROJECT_DIR$/src/sample/Darkest project.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Darkest UI.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Darkest Project.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/Darkest_imports.java" />
+        <option value="$PROJECT_DIR$/src/sample/Controller2.java" />
+        <option value="$PROJECT_DIR$/src/sample/Controller.java" />
+        <option value="$PROJECT_DIR$/src/sample/Generic.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Dark.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
-        <option value="$PROJECT_DIR$/src/sample/Generic.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/Controller.java" />
       </list>
     </option>
   </component>
@@ -206,8 +187,8 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
-    <option name="width" value="1614" />
-    <option name="height" value="878" />
+    <option name="width" value="1615" />
+    <option name="height" value="880" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
@@ -258,8 +239,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -408,7 +389,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -418,12 +398,12 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.27034482" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.27310345" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.122395836" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.122395836" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -492,11 +472,85 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
+        <state relative-caret-position="119">
+          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="8" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Darkest_imports.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="18" column="27" lean-forward="true" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Darkest_imports.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -514,9 +568,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -534,9 +585,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="77" selection-start-line="21" selection-start-column="77" selection-end-line="21" selection-end-column="77" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -657,36 +705,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Dark.fxml">
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="178" lean-forward="true" selection-start-line="10" selection-start-column="178" selection-end-line="10" selection-end-column="211" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Generic.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2387">
-          <caret line="18" column="87" selection-start-line="18" selection-start-column="87" selection-end-line="18" selection-end-column="87" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="53" column="47" selection-start-line="53" selection-start-column="47" selection-end-line="53" selection-end-column="47" />
+          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Darkest_imports.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Generic.fxml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Dark.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="200" lean-forward="true" selection-start-line="200" selection-end-line="200" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5537">
-          <caret line="219" column="5" selection-start-line="219" selection-start-column="5" selection-end-line="219" selection-end-column="5" />
+        <state relative-caret-position="102">
+          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="34" column="33" lean-forward="true" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

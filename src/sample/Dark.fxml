@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="window" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <children>
+    <AnchorPane fx:id="Anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="640.0" VBox.vgrow="ALWAYS">
+      <children>
+            <Rectangle fx:id="background" arcHeight="5.0" arcWidth="5.0" fill="#000000d6" height="470.0" stroke="BLACK" strokeType="INSIDE" width="640.0" />
+            <ImageView fx:id="Logo" fitHeight="105.0" fitWidth="303.0" layoutX="56.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Darkest_Dungeon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imageBountyHunter" fitHeight="72.0" fitWidth="72.0" layoutX="159.0" layoutY="130.0" onMouseClicked="#BountyHunterClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Bounty_Hunter.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imageAbomination" fitHeight="72.0" fitWidth="72.0" layoutX="408.0" layoutY="30.0" onMouseClicked="#AbominationClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Abomination.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imagePlagueDoctor" fitHeight="72.0" fitWidth="72.0" layoutX="284.0" layoutY="330.0" onMouseClicked="#DoctorClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Plague_doctor.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imageGraveRobber" fitHeight="72.0" fitWidth="72.0" layoutX="534.0" layoutY="130.0" onMouseClicked="#GraveRobberClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Grave_robber.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imageLeper" fitHeight="72.0" fitWidth="72.0" layoutX="534.0" layoutY="230.0" onMouseClicked="#LeperClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Leper.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imageOccultist" fitHeight="72.0" fitWidth="72.0" layoutX="159.0" layoutY="330.0" onMouseClicked="#OccultistClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Occultist.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imageShieldbreaker" fitHeight="72.0" fitWidth="72.0" layoutX="409.0" layoutY="330.0" onMouseClicked="#ShieldbreakerClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Shieldbreaker.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imageAntiquarian" fitHeight="72.0" fitWidth="72.0" layoutX="534.0" layoutY="30.0" onMouseClicked="#AntiquarianClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Antiquarian.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imageHoundmaster" fitHeight="72.0" fitWidth="72.0" layoutX="284.0" layoutY="230.0" onMouseClicked="#HoundmasterClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Hound_master.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imageArbalest" fitHeight="72.0" fitWidth="72.0" layoutX="34.0" layoutY="130.0" onMouseClicked="#ArbalestClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Arbalest.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imageCrusader" fitHeight="72.0" fitWidth="72.0" layoutX="284.0" layoutY="130.0" onMouseClicked="#CrusaderClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Crusader.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imageManAtArms" fitHeight="72.0" fitWidth="72.0" layoutX="34.0" layoutY="330.0" onMouseClicked="#ManClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Man-at-arms.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imageJester" fitHeight="72.0" fitWidth="72.0" layoutX="409.0" layoutY="230.0" onMouseClicked="#JesterClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Jester.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imageHellion" fitHeight="72.0" fitWidth="72.0" layoutX="34.0" layoutY="230.0" onMouseClicked="#HellionClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Hellion.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imageHighwayman" fitHeight="72.0" fitWidth="72.0" layoutX="159.0" layoutY="230.0" onMouseClicked="#HighwaymanClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Highwayman.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imageVestal" fitHeight="72.0" fitWidth="72.0" layoutX="534.0" layoutY="330.0" onMouseClicked="#VestalClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Vestal.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imageFlagellant" fitHeight="72.0" fitWidth="72.0" layoutX="409.0" layoutY="130.0" onMouseClicked="#FlagellantClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Flagellant.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="labelAbomination" layoutX="399.0" layoutY="102.0" text="Abomination" textFill="#f26900">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelAntiquarian" layoutX="529.0" layoutY="102.0" text="Antiquarian" textFill="#f26900">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelArbalest" layoutX="41.0" layoutY="202.0" text="Arbalest" textFill="#f26900">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelBountyHunter" layoutX="143.0" layoutY="202.0" text="Bounty Hunter" textFill="#f26900">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelCrusader" layoutX="288.0" layoutY="202.0" text="Crusader" textFill="#f26900">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelFlagellant" layoutX="411.0" layoutY="202.0" text="Flagellant" textFill="#f26900">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelGraveRobber" layoutX="521.0" layoutY="202.0" text="Grave Robber" textFill="#f26900">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelHellion" layoutX="45.0" layoutY="302.0" text="Hellion" textFill="#f26900">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelHighwayman" layoutX="148.0" layoutY="302.0" text="Highwayman" textFill="#f26900">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelHoundmaster" layoutX="271.0" layoutY="302.0" text="Houndmaster" textFill="#f26900">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelJester" layoutX="424.0" layoutY="302.0" text="Jester" textFill="#f26900">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelLeper" layoutX="550.0" layoutY="302.0" text="Leper" textFill="#f26900">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelManAtArms" layoutX="23.0" layoutY="402.0" text="Man-at-Arms" textFill="#f26900">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelOccultist" layoutX="163.0" layoutY="402.0" text="Occultist" textFill="#f26900">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelPlagueDoctor" layoutX="270.0" layoutY="402.0" text="Plague Doctor" textFill="#f26900">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelShieldbreaker" layoutX="397.0" layoutY="402.0" text="Shieldbreaker" textFill="#f26900">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelVestal" layoutX="547.0" layoutY="402.0" text="Vestal" textFill="#f26900">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="237.0" layoutY="428.0" prefHeight="36.0" prefWidth="165.0" text="Choose a Hero" textFill="#f06800">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

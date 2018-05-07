@@ -9,6 +9,12 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.image.ImageView;
 import javafx.event.ActionEvent;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
+import java.io.IOException;
 
 public class Controller2 {
 
@@ -19,7 +25,7 @@ public class Controller2 {
     public ComboBox<?> LevelBox;
 
     @FXML
-    public static Label HeroName;
+    public  Label HeroName;
 
     @FXML
     public TableView<?> BaseStats;
@@ -114,191 +120,191 @@ public class Controller2 {
     @FXML
     public TableView<?> Skill1;
 
-    @FXML
-    public TableColumn<?, ?> Column11;
+        @FXML
+        public TableColumn<?, ?> Column11;
 
-    @FXML
-    public TableColumn<?, ?> Column21;
+        @FXML
+        public TableColumn<?, ?> Column21;
 
-    @FXML
-    public TableColumn<?, ?> Column31;
+        @FXML
+        public TableColumn<?, ?> Column31;
 
-    @FXML
-    public TableColumn<?, ?> Column41;
+        @FXML
+        public TableColumn<?, ?> Column41;
 
-    @FXML
-    public TableColumn<?, ?> Column51;
+        @FXML
+        public TableColumn<?, ?> Column51;
 
-    @FXML
-    public TableColumn<?, ?> Column61;
+        @FXML
+        public TableColumn<?, ?> Column61;
 
-    @FXML
-    public TableColumn<?, ?> Column71;
+        @FXML
+        public TableColumn<?, ?> Column71;
 
-    @FXML
-    public TableColumn<?, ?> Column81;
+        @FXML
+        public TableColumn<?, ?> Column81;
 
     @FXML
     public TableView<?> Skill2;
 
-    @FXML
-    public TableColumn<?, ?> Column12;
+        @FXML
+        public TableColumn<?, ?> Column12;
 
-    @FXML
-    public TableColumn<?, ?> Column22;
+        @FXML
+        public TableColumn<?, ?> Column22;
 
-    @FXML
-    public TableColumn<?, ?> Column32;
+        @FXML
+        public TableColumn<?, ?> Column32;
 
-    @FXML
-    public TableColumn<?, ?> Column42;
+        @FXML
+        public TableColumn<?, ?> Column42;
 
-    @FXML
-    public TableColumn<?, ?> Column52;
+        @FXML
+        public TableColumn<?, ?> Column52;
 
-    @FXML
-    public TableColumn<?, ?> Column62;
+        @FXML
+        public TableColumn<?, ?> Column62;
 
-    @FXML
-    public TableColumn<?, ?> Column72;
+        @FXML
+        public TableColumn<?, ?> Column72;
 
-    @FXML
-    public TableColumn<?, ?> Column82;
+        @FXML
+        public TableColumn<?, ?> Column82;
 
     @FXML
     public TableView<?> Skill3;
 
-    @FXML
-    public TableColumn<?, ?> Column13;
+        @FXML
+        public TableColumn<?, ?> Column13;
 
-    @FXML
-    public TableColumn<?, ?> Column23;
+        @FXML
+        public TableColumn<?, ?> Column23;
 
-    @FXML
-    public TableColumn<?, ?> Column33;
+        @FXML
+        public TableColumn<?, ?> Column33;
 
-    @FXML
-    public TableColumn<?, ?> Column43;
+        @FXML
+        public TableColumn<?, ?> Column43;
 
-    @FXML
-    public TableColumn<?, ?> Column53;
+        @FXML
+        public TableColumn<?, ?> Column53;
 
-    @FXML
-    public TableColumn<?, ?> Column63;
+        @FXML
+        public TableColumn<?, ?> Column63;
 
-    @FXML
-    public TableColumn<?, ?> Column73;
+        @FXML
+        public TableColumn<?, ?> Column73;
 
-    @FXML
-    public TableColumn<?, ?> Column83;
+        @FXML
+        public TableColumn<?, ?> Column83;
 
     @FXML
     public TableView<?> Skill4;
 
-    @FXML
-    public TableColumn<?, ?> Column14;
+        @FXML
+        public TableColumn<?, ?> Column14;
 
-    @FXML
-    public TableColumn<?, ?> Column24;
+        @FXML
+        public TableColumn<?, ?> Column24;
 
-    @FXML
-    public TableColumn<?, ?> Column34;
+        @FXML
+        public TableColumn<?, ?> Column34;
 
-    @FXML
-    public TableColumn<?, ?> Column44;
+        @FXML
+        public TableColumn<?, ?> Column44;
 
-    @FXML
-    public TableColumn<?, ?> Column54;
+        @FXML
+        public TableColumn<?, ?> Column54;
 
-    @FXML
-    public TableColumn<?, ?> Column64;
+        @FXML
+        public TableColumn<?, ?> Column64;
 
-    @FXML
-    public TableColumn<?, ?> Column74;
+        @FXML
+        public TableColumn<?, ?> Column74;
 
-    @FXML
-    public TableColumn<?, ?> Column84;
+        @FXML
+        public TableColumn<?, ?> Column84;
 
     @FXML
     public TableView<?> Skill5;
 
-    @FXML
-    public TableColumn<?, ?> Column15;
+        @FXML
+        public TableColumn<?, ?> Column15;
 
-    @FXML
-    public TableColumn<?, ?> Column25;
+        @FXML
+        public TableColumn<?, ?> Column25;
 
-    @FXML
-    public TableColumn<?, ?> Column35;
+        @FXML
+        public TableColumn<?, ?> Column35;
 
-    @FXML
-    public TableColumn<?, ?> Column45;
+        @FXML
+        public TableColumn<?, ?> Column45;
 
-    @FXML
-    public TableColumn<?, ?> Column55;
+        @FXML
+        public TableColumn<?, ?> Column55;
 
-    @FXML
-    public TableColumn<?, ?> Column65;
+        @FXML
+        public TableColumn<?, ?> Column65;
 
-    @FXML
-    public TableColumn<?, ?> Column75;
+        @FXML
+        public TableColumn<?, ?> Column75;
 
-    @FXML
-    public TableColumn<?, ?> Column85;
+        @FXML
+        public TableColumn<?, ?> Column85;
 
     @FXML
     public TableView<?> Skill6;
 
-    @FXML
-    public TableColumn<?, ?> Column16;
+        @FXML
+        public TableColumn<?, ?> Column16;
 
-    @FXML
-    public TableColumn<?, ?> Column26;
+        @FXML
+        public TableColumn<?, ?> Column26;
 
-    @FXML
-    public TableColumn<?, ?> Column36;
+        @FXML
+        public TableColumn<?, ?> Column36;
 
-    @FXML
-    public TableColumn<?, ?> Column46;
+        @FXML
+        public TableColumn<?, ?> Column46;
 
-    @FXML
-    public TableColumn<?, ?> Column56;
+        @FXML
+        public TableColumn<?, ?> Column56;
 
-    @FXML
-    public TableColumn<?, ?> Column66;
+        @FXML
+        public TableColumn<?, ?> Column66;
 
-    @FXML
-    public TableColumn<?, ?> Column76;
+        @FXML
+        public TableColumn<?, ?> Column76;
 
-    @FXML
-    public TableColumn<?, ?> Column86;
+        @FXML
+        public TableColumn<?, ?> Column86;
 
     @FXML
     public TableView<?> Skill7;
 
-    @FXML
-    public TableColumn<?, ?> Column17;
+        @FXML
+        public TableColumn<?, ?> Column17;
 
-    @FXML
-    public TableColumn<?, ?> Column27;
+        @FXML
+        public TableColumn<?, ?> Column27;
 
-    @FXML
-    public TableColumn<?, ?> Column37;
+        @FXML
+        public TableColumn<?, ?> Column37;
 
-    @FXML
-    public TableColumn<?, ?> Column47;
+        @FXML
+        public TableColumn<?, ?> Column47;
 
-    @FXML
-    public TableColumn<?, ?> Column57;
+        @FXML
+        public TableColumn<?, ?> Column57;
 
-    @FXML
-    public TableColumn<?, ?> Column67;
+        @FXML
+        public TableColumn<?, ?> Column67;
 
-    @FXML
-    public TableColumn<?, ?> Column77;
+        @FXML
+        public TableColumn<?, ?> Column77;
 
-    @FXML
-    public TableColumn<?, ?> Column87;
+        @FXML
+        public TableColumn<?, ?> Column87;
 
     @FXML
     void LevelChange(ActionEvent event) {
@@ -308,6 +314,7 @@ public class Controller2 {
     @FXML
     void Load(ActionEvent event) {
 
+        HeroName.setText("WHY GOD");
     }
 
     @FXML
@@ -354,5 +361,5 @@ public class Controller2 {
     void Skill8Checked(ActionEvent event) {
 
     }
-
 }
+

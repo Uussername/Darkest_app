@@ -2,6 +2,7 @@ package sample;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -17,10 +18,13 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.event.ActionEvent;
 import javafx.stage.Stage;
-
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 import java.io.IOException;
 import java.lang.invoke.MethodHandles;
-
+import java.lang.reflect.Field;
 
 
 public class Controller {
@@ -142,92 +146,95 @@ public class Controller {
 
     @FXML
     void AbominationClick(MouseEvent event) throws IOException {
-        Darkest_imports.Bain("Abomination");
+        Heroes Abomination = new Heroes("Abomination");
+        Field[] fields = Heroes.class.getFields();
 
     }
 
     @FXML
     void AntiquarianClick(MouseEvent event) throws IOException {
-        Darkest_imports.Bain("Antiquarian");
+        Heroes Antiquarian = new Heroes("Antiquarian");
 
     }
 
     @FXML
     void ArbalestClick(MouseEvent event) throws IOException {
-        Darkest_imports.Bain("Arbalest");
+        Heroes Arbalest = new Heroes("Arbalest");
     }
 
     @FXML
     void BountyHunterClick(MouseEvent event) throws IOException {
-        Darkest_imports.Bain("Bounty_Hunter");
-        Main.Window();
-        Controller2.HeroName.setText("Bounty Hunter");
+
+        Heroes BountyHunter = new Heroes("Bounty_Hunter");
+        Main.Window("Bounty Hunter");
 
     }
 
     @FXML
     void CrusaderClick(MouseEvent event) throws IOException {
-        Darkest_imports.Bain("Crusader");
+        Heroes Crusader = new Heroes("Crusader");
     }
 
     @FXML
     void DoctorClick(MouseEvent event) throws IOException {
-        Darkest_imports.Bain("Plague_Doctor");
+        Heroes PlagueDoctor = new Heroes("Plague_Doctor");
+
     }
 
     @FXML
     void FlagellantClick(MouseEvent event) throws IOException {
-        Darkest_imports.Bain("Flagellant");
+        Heroes Flagellant = new Heroes("Flagellant");
+        Main.Window("Flagellant");
     }
 
     @FXML
     void GraveRobberClick(MouseEvent event) throws IOException {
-        Darkest_imports.Bain("Grave_Robber");
+        Heroes GraveRobber = new Heroes("Grave_Robber");
     }
 
     @FXML
     void HellionClick(MouseEvent event) throws IOException {
-        Darkest_imports.Bain("Hellion");
+        Heroes Hellion = new Heroes("Hellion");
     }
 
     @FXML
     void HighwaymanClick(MouseEvent event) throws IOException {
-        Darkest_imports.Bain("Highwayman");
+        Heroes Highwayman = new Heroes("Highwayman");
     }
 
     @FXML
     void HoundmasterClick(MouseEvent event) throws IOException {
-        Darkest_imports.Bain("Houndmaster");
+        Heroes Houndmaster = new Heroes("Houndmaster");
     }
 
     @FXML
     void JesterClick(MouseEvent event) throws IOException {
-        Darkest_imports.Bain("Jester");
+        Heroes Jester = new Heroes("Jester");
     }
 
     @FXML
     void LeperClick(MouseEvent event) throws IOException {
-        Darkest_imports.Bain("Leper");
+        Heroes Leper = new Heroes("Leper");
     }
 
     @FXML
     void ManClick(MouseEvent event) throws IOException {
-        Darkest_imports.Bain("Man-at-Arms");
+        Heroes ManAtArms = new Heroes("Man-at-Arms");
     }
 
     @FXML
     void OccultistClick(MouseEvent event) throws IOException {
-        Darkest_imports.Bain("Occultist");
+        Heroes Occultist = new Heroes("Occultist");
     }
 
     @FXML
     void ShieldbreakerClick(MouseEvent event) throws IOException {
-        Darkest_imports.Bain("Shieldbreaker");
+        Heroes Sheildbreaker = new Heroes("Shieldbreaker");
     }
 
     @FXML
     void VestalClick(MouseEvent event) throws IOException {
-        Darkest_imports.Bain("Vestal");
+        Heroes Vestal = new Heroes("Vestal");
     }
 
 }

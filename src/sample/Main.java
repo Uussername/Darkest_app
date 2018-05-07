@@ -14,8 +14,9 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("Dark.fxml"));
-
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Dark.fxml"));
+        fxmlLoader.setController(new Controller());
+        Parent root = (Parent)fxmlLoader.load();
         primaryStage.setTitle("The Darkest Dungeon");
         primaryStage.setScene(new Scene(root, 640, 470));
         primaryStage.setResizable(false);
@@ -27,15 +28,17 @@ public class Main extends Application {
 
     }
 
-    public static void Window() throws IOException {
+    public static Stage Window(String name) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(MethodHandles.lookup().lookupClass().getResource("Generic.fxml"));
+        fxmlLoader.setController(new Controller2());
+        Parent root = (Parent)fxmlLoader.load();
         Stage stage = new Stage();
-        Parent root = FXMLLoader.load(MethodHandles.lookup().lookupClass().getResource("Generic.fxml"));
-        stage.setTitle("The Darkest Hero");
+        stage.setTitle(name);
         stage.setScene(new Scene(root, 730, 700));
         stage.setResizable(false);
         stage.show();
+        return stage;
     }
-
-    }
+}
 
 

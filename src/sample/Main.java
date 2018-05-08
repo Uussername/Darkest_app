@@ -28,10 +28,14 @@ public class Main extends Application {
 
     }
 
-    public static Stage Window(String name) throws IOException {
+    public static Stage Window(String name, Heroes hero) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MethodHandles.lookup().lookupClass().getResource("Generic.fxml"));
         fxmlLoader.setController(new Controller2());
-        Parent root = (Parent)fxmlLoader.load();
+        Parent root = fxmlLoader.load();
+
+        Controller2 cont = fxmlLoader.getController();
+        cont.SetValues(hero.table.select("tr").first().text());
+
         Stage stage = new Stage();
         stage.setTitle(name);
         stage.setScene(new Scene(root, 730, 700));

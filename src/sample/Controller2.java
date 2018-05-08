@@ -1,6 +1,7 @@
 package sample;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
@@ -15,8 +16,10 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class Controller2 {
+public class Controller2 implements Initializable {
 
     @FXML
     public ImageView Portrait;
@@ -25,7 +28,7 @@ public class Controller2 {
     public ComboBox<?> LevelBox;
 
     @FXML
-    public  Label HeroName;
+    public Label HeroName;
 
     @FXML
     public TableView<?> BaseStats;
@@ -306,6 +309,7 @@ public class Controller2 {
         @FXML
         public TableColumn<?, ?> Column87;
 
+
     @FXML
     void LevelChange(ActionEvent event) {
 
@@ -314,7 +318,6 @@ public class Controller2 {
     @FXML
     void Load(ActionEvent event) {
 
-        HeroName.setText("WHY GOD");
     }
 
     @FXML
@@ -359,6 +362,14 @@ public class Controller2 {
 
     @FXML
     void Skill8Checked(ActionEvent event) {
+
+    }
+    public void SetValues(String name){
+        this.HeroName.setText(name);
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
 
     }
 }

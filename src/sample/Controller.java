@@ -149,7 +149,7 @@ public class Controller implements Initializable{
     @FXML
     void AbominationClick(MouseEvent event) throws IOException {
         Heroes Abomination = new Heroes("Abomination");
-        Field[] fields = Heroes.class.getFields();
+        Main.Window("Abomination", Abomination);
 
     }
 
@@ -167,22 +167,22 @@ public class Controller implements Initializable{
 
     @FXML
     void BountyHunterClick(MouseEvent event) throws IOException {
-
         Heroes BountyHunter = new Heroes("Bounty_Hunter");
-        Main.Window("Bounty Hunter", BountyHunter);
+        Main.Window("Bounty_Hunter", BountyHunter);
 
     }
 
     @FXML
     void CrusaderClick(MouseEvent event) throws IOException {
         Heroes Crusader = new Heroes("Crusader");
+        //Heroes.test(Crusader);
         Main.Window("Crusader", Crusader);
     }
 
     @FXML
     void DoctorClick(MouseEvent event) throws IOException {
         Heroes PlagueDoctor = new Heroes("Plague_Doctor");
-        Main.Window("Plague Doctor", PlagueDoctor);
+        Main.Window("Plague_Doctor", PlagueDoctor);
     }
 
     @FXML
@@ -194,7 +194,7 @@ public class Controller implements Initializable{
     @FXML
     void GraveRobberClick(MouseEvent event) throws IOException {
         Heroes GraveRobber = new Heroes("Grave_Robber");
-        Main.Window("Grave Robber", GraveRobber);
+        Main.Window("Grave_Robber", GraveRobber);
     }
 
     @FXML
@@ -212,7 +212,7 @@ public class Controller implements Initializable{
     @FXML
     void HoundmasterClick(MouseEvent event) throws IOException {
         Heroes Houndmaster = new Heroes("Houndmaster");
-        Main.Window("Houndmaster", Houndmaster);
+        Main.Window("Hound_master", Houndmaster);
     }
 
     @FXML

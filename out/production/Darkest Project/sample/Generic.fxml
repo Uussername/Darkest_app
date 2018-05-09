@@ -11,20 +11,25 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="658.0" prefWidth="727.0" VBox.vgrow="ALWAYS">
          <children>
-            <ImageView fx:id="Portrait" fitHeight="100.0" fitWidth="109.0" layoutX="6.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="Jank" layoutX="58.0" layoutY="41.0" text="jank">
+               <font>
+                  <Font size="5.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="Portrait" fitHeight="100.0" fitWidth="109.0" layoutX="9.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
             <ComboBox fx:id="LevelBox" layoutX="128.0" layoutY="74.0" onAction="#LevelChange" prefWidth="150.0" promptText="Resolve Level" visibleRowCount="5" />
             <Label fx:id="HeroName" layoutX="128.0" layoutY="22.0" text="name">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <TableView fx:id="BaseStats" layoutX="6.0" layoutY="107.0" prefHeight="582.0" prefWidth="123.0">
+            <TableView fx:id="BaseStats" layoutX="6.0" layoutY="107.0" prefHeight="461.0" prefWidth="123.0">
               <columns>
-                <TableColumn fx:id="Catagroy" prefWidth="64.79998922348022" text="Resolve" />
+                <TableColumn fx:id="Catagroy" prefWidth="64.79998922348022" />
                 <TableColumn fx:id="Stats" prefWidth="85.5999984741211" />
               </columns>
             </TableView>
@@ -76,18 +81,12 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label fx:id="SkillName7" layoutX="412.0" layoutY="605.0" text="Skill">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
             <CheckBox fx:id="SkillCheck" layoutX="635.0" layoutY="86.0" mnemonicParsing="false" onAction="#Skill1Checked" />
             <CheckBox fx:id="SkillCheck1" layoutX="635.0" layoutY="160.0" mnemonicParsing="false" onAction="#Skill2Checked" />
             <CheckBox fx:id="SkillCheck2" layoutX="635.0" layoutY="235.0" mnemonicParsing="false" onAction="#Skill3Checked" />
             <CheckBox fx:id="SkillCheck3" layoutX="635.0" layoutY="310.0" mnemonicParsing="false" onAction="#Skill4Checked" />
             <CheckBox fx:id="SkillCheck4" layoutX="635.0" layoutY="385.0" mnemonicParsing="false" onAction="#Skill5Checked" />
             <CheckBox fx:id="SkillCheck5" layoutX="634.0" layoutY="460.0" mnemonicParsing="false" onAction="#Skill6Checked" />
-            <CheckBox fx:id="SkillCheck7" layoutX="632.0" layoutY="610.0" mnemonicParsing="false" onAction="#Skill8Checked" />
             <CheckBox fx:id="SkillCheck6" layoutX="634.0" layoutY="535.0" mnemonicParsing="false" onAction="#Skill7Checked" />
             <TableView fx:id="Skill1" layoutX="139.0" layoutY="182.0" prefHeight="48.0" prefWidth="578.0">
                <columns>
@@ -159,18 +158,6 @@
                   <TableColumn fx:id="Column66" prefWidth="53.5999755859375" />
                   <TableColumn fx:id="Column76" prefWidth="107.19998168945312" />
                   <TableColumn fx:id="Column86" prefWidth="98.4000244140625" />
-               </columns>
-            </TableView>
-            <TableView fx:id="Skill7" layoutX="138.0" layoutY="632.0" prefHeight="48.0" prefWidth="578.0">
-               <columns>
-                  <TableColumn fx:id="Column17" prefWidth="58.4000244140625" />
-                  <TableColumn fx:id="Column27" prefWidth="61.5999755859375" />
-                  <TableColumn fx:id="Column37" prefWidth="72.0" />
-                  <TableColumn fx:id="Column47" prefWidth="52.800048828125" />
-                  <TableColumn fx:id="Column57" prefWidth="69.5999755859375" />
-                  <TableColumn fx:id="Column67" prefWidth="53.5999755859375" />
-                  <TableColumn fx:id="Column77" prefWidth="107.19998168945312" />
-                  <TableColumn fx:id="Column87" prefWidth="98.4000244140625" />
                </columns>
             </TableView>
          </children>

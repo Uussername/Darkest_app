@@ -8,16 +8,19 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.event.ActionEvent;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
+import javafx.collections.FXCollections;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.EventObject;
 import java.util.ResourceBundle;
+import javafx.collections.ObservableList;
 
 public class Controller2 implements Initializable {
 
@@ -25,46 +28,49 @@ public class Controller2 implements Initializable {
     public ImageView Portrait;
 
     @FXML
-    public ComboBox<?> LevelBox;
+    public ComboBox<Integer> LevelBox;
 
     @FXML
     public Label HeroName;
 
     @FXML
-    public TableView<?> BaseStats;
+    public Label Jank;
 
     @FXML
-    public TableColumn<?, ?> Catagroy;
+    public TableView<ROW> BaseStats;
 
-    @FXML
-    public TableColumn<?, ?> Stats;
+        @FXML
+        public TableColumn<ROW, String> Catagroy;
+
+        @FXML
+        public TableColumn<ROW, String> Stats;
 
     @FXML
     public TableView<?> Skill;
 
-    @FXML
-    public TableColumn<?, ?> Column1;
+        @FXML
+        public TableColumn<?, ?> Column1;
 
-    @FXML
-    public TableColumn<?, ?> Column2;
+        @FXML
+        public TableColumn<?, ?> Column2;
 
-    @FXML
-    public TableColumn<?, ?> Column3;
+        @FXML
+        public TableColumn<?, ?> Column3;
 
-    @FXML
-    public TableColumn<?, ?> Column4;
+        @FXML
+        public TableColumn<?, ?> Column4;
 
-    @FXML
-    public TableColumn<?, ?> Column5;
+        @FXML
+        public TableColumn<?, ?> Column5;
 
-    @FXML
-    public TableColumn<?, ?> Column6;
+        @FXML
+        public TableColumn<?, ?> Column6;
 
-    @FXML
-    public TableColumn<?, ?> Column7;
+        @FXML
+        public TableColumn<?, ?> Column7;
 
-    @FXML
-    public TableColumn<?, ?> Column8;
+        @FXML
+        public TableColumn<?, ?> Column8;
 
     @FXML
     public Button SaveButton;
@@ -92,9 +98,6 @@ public class Controller2 implements Initializable {
 
     @FXML
     public Label SkillName6;
-
-    @FXML
-    public Label SkillName7;
 
     @FXML
     public CheckBox SkillCheck;
@@ -311,8 +314,9 @@ public class Controller2 implements Initializable {
 
 
     @FXML
-    void LevelChange(ActionEvent event) {
-
+    void LevelChange(ActionEvent event) throws IOException {
+        Heroes hero = new Heroes(Jank.getText());
+        SetTable(hero, LevelBox.getValue());
     }
 
     @FXML
@@ -359,18 +363,48 @@ public class Controller2 implements Initializable {
     void Skill7Checked(ActionEvent event) {
 
     }
+    public void SetValues(Heroes hero, String name) throws FileNotFoundException {
 
-    @FXML
-    void Skill8Checked(ActionEvent event) {
+        //setting labels
+        this.HeroName.setText(hero.Base.select("tr").first().text());
+        this.Jank.setText(name);
+        this.SkillName.setText(hero.skill1.select("tr").first().text());
+        this.SkillName1.setText(hero.skill2.select("tr").first().text());
+        this.SkillName2.setText(hero.skill3.select("tr").first().text());
+        this.SkillName3.setText(hero.skill4.select("tr").first().text());
+        this.SkillName4.setText(hero.skill5.select("tr").first().text());
+        this.SkillName5.setText(hero.skill6.select("tr").first().text());
+        this.SkillName6.setText(hero.skill7.select("tr").first().text());
+
+        //setting label
+        Image image = new Image(hero.Base.select("img").attr("src"));
+        this.Portrait.setImage(image);
+
 
     }
-    public void SetValues(String name){
-        this.HeroName.setText(name);
+    public void SetTable(Heroes hero, int Num) {
+        ArrayList<String> FIRST = Heroes.statList(hero, 0);
+        ArrayList<String> SECOND = Heroes.statList2(hero, Num);
+
+
+        final ObservableList<ROW> data = FXCollections.observableArrayList();
+        for (int x = 1; x < 18; x++) {
+            ROW item = new ROW(FIRST.get(x), SECOND.get(x));
+            data.add(item);
+        }
+
+        Catagroy.setCellValueFactory(
+                new PropertyValueFactory<ROW, String>("Catagory")
+        );
+        Stats.setCellValueFactory(
+                new PropertyValueFactory<ROW, String>("level"));
+        BaseStats.setItems(data);
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        LevelBox.getItems().addAll(1, 2, 3, 4, 5);
     }
 }
+
 

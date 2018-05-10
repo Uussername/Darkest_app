@@ -22,7 +22,26 @@ public class ROWskill {
         this.Sixth = new SimpleStringProperty(sixth);
         this.Eighth = new SimpleStringProperty(eighth);
         this.Seventh = new SimpleStringProperty(seventh);
-
+    }
+    public ROWskill(String first, String second, String third, String fourth) {
+        this.First = new SimpleStringProperty(first);
+        this.Second = new SimpleStringProperty(second);
+        this.Third = new SimpleStringProperty(third);
+        this.Fourth = new SimpleStringProperty(fourth);
+        this.Fifth = new SimpleStringProperty("");
+        this.Sixth = new SimpleStringProperty("");
+        this.Eighth = new SimpleStringProperty("");
+        this.Seventh = new SimpleStringProperty("");
+    }
+    public ROWskill(String first, String second, String third, String fourth, String fifth, String sixth) {
+        this.First = new SimpleStringProperty(first);
+        this.Second = new SimpleStringProperty(second);
+        this.Third = new SimpleStringProperty(third);
+        this.Fourth = new SimpleStringProperty(fourth);
+        this.Fifth = new SimpleStringProperty(fifth);
+        this.Sixth = new SimpleStringProperty(sixth);
+        this.Eighth = new SimpleStringProperty("");
+        this.Seventh = new SimpleStringProperty("");
     }
     public String getFirst() {
         return First.get();

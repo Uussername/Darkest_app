@@ -83,6 +83,56 @@
             <TableView fx:id="Skill4" layoutX="139.0" layoutY="475.0" prefHeight="65.0" prefWidth="578.0" />
             <TableView fx:id="Skill5" layoutX="139.0" layoutY="567.0" prefHeight="65.0" prefWidth="578.0" />
             <TableView fx:id="Skill6" layoutX="139.0" layoutY="659.0" prefHeight="65.0" prefWidth="578.0" />
+            <Label layoutX="319.0" layoutY="13.0" text="Pref. Rank">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="422.0" layoutY="13.0" text="Pref. Target">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="Prank1" layoutX="319.0" layoutY="40.0" text="0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="Prank2" layoutX="339.0" layoutY="40.0" text="0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="Prank3" layoutX="359.0" layoutY="40.0" text="0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="Prank4" layoutX="380.0" layoutY="40.0" text="0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="Ptarget1" layoutX="428.0" layoutY="40.0" text="0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="Ptarget2" layoutX="448.0" layoutY="40.0" text="0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="Ptarget3" layoutX="468.0" layoutY="40.0" text="0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="Ptarget4" layoutX="488.0" layoutY="40.0" text="0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
          </children>
     </AnchorPane>
   </children>

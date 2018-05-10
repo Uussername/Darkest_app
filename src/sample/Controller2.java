@@ -71,7 +71,28 @@ public class Controller2 implements Initializable {
     public Label SkillName6;
 
     @FXML
-    public TableView<ROWskill> Skill;
+    public Label Prank1;
+
+    @FXML
+    public Label Prank2;
+
+    @FXML
+    public Label Prank3;
+
+    @FXML
+    public Label Prank4;
+
+    @FXML
+    public Label Ptarget1;
+
+    @FXML
+    public Label Ptarget2;
+
+    @FXML
+    public Label Ptarget3;
+
+    @FXML
+    public Label Ptarget4;
 
     @FXML
     public CheckBox SkillCheck;
@@ -98,39 +119,45 @@ public class Controller2 implements Initializable {
     public CheckBox SkillCheck6;
 
     @FXML
-    public TableView<ROWskill> Skill1;
+    private TableView<ROWskill> Skill;
 
     @FXML
-    public TableView<ROWskill> Skill2;
+    private TableView<ROWskill> Skill1;
 
     @FXML
-    public TableView<ROWskill> Skill3;
+    private TableView<ROWskill> Skill2;
 
     @FXML
-    public TableView<ROWskill> Skill4;
+    private TableView<ROWskill> Skill3;
 
     @FXML
-    public TableView<ROWskill> Skill5;
+    private TableView<ROWskill> Skill4;
 
     @FXML
-    public TableView<ROWskill> Skill6;
+    private TableView<ROWskill> Skill5;
 
     @FXML
-    public TableView<ROWskill> Skill7;
+    private TableView<ROWskill> Skill6;
 
     @FXML
     void LevelChange(ActionEvent event) throws IOException {
         Skill.getColumns().clear();
         Skill1.getColumns().clear();
+        Skill2.getColumns().clear();
+        Skill3.getColumns().clear();
+        Skill4.getColumns().clear();
+        Skill5.getColumns().clear();
+        Skill6.getColumns().clear();
+
         Heroes hero = new Heroes(Jank.getText());
         SetTable(hero, LevelBox.getValue());
-        SkillTable(hero, Skill, 1);
-        SkillTable(hero, Skill1, 3);
-        SkillTable(hero, Skill2, 5);
-        SkillTable(hero, Skill3, 7);
-        SkillTable(hero, Skill4, 9);
-        SkillTable(hero, Skill5, 11);
-        SkillTable(hero, Skill6, 13);
+        TableFinder(hero, Skill, 1);
+        TableFinder(hero, Skill1, 3);
+        TableFinder(hero, Skill2, 5);
+        TableFinder(hero, Skill3, 7);
+        TableFinder(hero, Skill4, 9);
+        TableFinder(hero, Skill5, 11);
+        TableFinder(hero, Skill6, 13);
 
     }
 
@@ -145,8 +172,21 @@ public class Controller2 implements Initializable {
     }
 
     @FXML
-    void Skill1Checked(ActionEvent event) {
+    void Skill1Checked(ActionEvent event) throws IOException {
+        if (SkillCheck.isSelected()) {
+            Heroes hero = new Heroes(Jank.getText());
+            Prank1.setText(Heroes.RANKnum(hero, 1, 1).toString());
+            Prank2.setText(Heroes.RANKnum(hero, 1, 2).toString());
+            Prank3.setText(Heroes.RANKnum(hero, 1, 3).toString());
+            Prank4.setText(Heroes.RANKnum(hero, 1, 4).toString());
 
+
+            Ptarget1.setText(Heroes.RANK(hero, 1));
+        }
+        if (!SkillCheck.isSelected()){
+            Prank1.setText("");
+            Ptarget1.setText("");
+        }
     }
 
     @FXML
@@ -215,7 +255,7 @@ public class Controller2 implements Initializable {
                 new PropertyValueFactory<ROW, String>("level"));
         BaseStats.setItems(data);
     }
-    public void SkillTable(Heroes hero, TableView<ROWskill> tabs, int selector){
+    private void SkillTable(Heroes hero, TableView<ROWskill> tabs, int selector){
         ArrayList<String> skill = Heroes.skillsListDamage(hero,1, selector );
         ArrayList<String> skill2 = Heroes.skillsListDamage(hero,2,selector );
         ArrayList<String> skill3 = Heroes.skillsListDamage(hero,3,selector );
@@ -257,6 +297,81 @@ public class Controller2 implements Initializable {
                 new PropertyValueFactory<ROWskill, String>("Eighth"));
             tabs.setItems(data);
 
+    }
+    private void SkillTableBUFF(Heroes hero, TableView<ROWskill> tabs, int selector){
+        ArrayList<String> skill = Heroes.SkillListBuff(hero,1, selector );
+        ArrayList<String> skill2 = Heroes.SkillListBuff(hero,2,selector );
+        ArrayList<String> skill3 = Heroes.SkillListBuff(hero,3,selector );
+        ArrayList<String> skill4 = Heroes.SkillListBuff(hero,4,selector);
+
+        final ObservableList<ROWskill> data = FXCollections.observableArrayList();
+        ROWskill item = new ROWskill(skill.get(1), skill2.get(1), skill3.get(1), skill4.get(1));
+        data.add(item);
+        TableColumn one = new TableColumn(skill.get(0));
+        TableColumn two = new TableColumn(skill2.get(0));
+        TableColumn three = new TableColumn(skill3.get(0));
+        TableColumn four = new TableColumn(skill4.get(0));
+
+        tabs.getColumns().addAll(one, two, three, four);
+
+        one.setCellValueFactory(
+                new PropertyValueFactory<ROWskill, String>("first"));
+        two.setCellValueFactory(
+                new PropertyValueFactory<ROWskill, String>("Second"));
+        three.setCellValueFactory(
+                new PropertyValueFactory<ROWskill, String>("Third"));
+        four.setCellValueFactory(
+                new PropertyValueFactory<ROWskill, String>("Fourth"));
+        tabs.setItems(data);
+    }
+    private void SkillTableHEAL(Heroes hero, TableView<ROWskill> tabs, int selector){
+        ArrayList<String> skill = Heroes.SkillListBuff(hero,1, selector );
+        ArrayList<String> skill2 = Heroes.SkillListBuff(hero,2,selector );
+        ArrayList<String> skill3 = Heroes.SkillListBuff(hero,3,selector );
+        ArrayList<String> skill4 = Heroes.SkillListBuff(hero,4,selector);
+        ArrayList<String> skill5 = Heroes.SkillListBuff(hero,5 ,selector);
+        ArrayList<String> skill6 = Heroes.SkillListBuff(hero,6 ,selector);
+
+        final ObservableList<ROWskill> data = FXCollections.observableArrayList();
+        ROWskill item = new ROWskill(skill.get(1), skill2.get(1), skill3.get(1), skill4.get(1), skill5.get(1), skill6.get(1));
+        data.add(item);
+        TableColumn one = new TableColumn(skill.get(0));
+        TableColumn two = new TableColumn(skill2.get(0));
+        TableColumn three = new TableColumn(skill3.get(0));
+        TableColumn four = new TableColumn(skill4.get(0));
+        TableColumn five = new TableColumn(skill5.get(0));
+        TableColumn six = new TableColumn(skill6.get(0));
+
+        tabs.getColumns().addAll(one, two, three, four, five, six);
+
+        one.setCellValueFactory(
+                new PropertyValueFactory<ROWskill, String>("first"));
+        two.setCellValueFactory(
+                new PropertyValueFactory<ROWskill, String>("Second"));
+        three.setCellValueFactory(
+                new PropertyValueFactory<ROWskill, String>("Third"));
+        four.setCellValueFactory(
+                new PropertyValueFactory<ROWskill, String>("Fourth"));
+        five.setCellValueFactory(
+                new PropertyValueFactory<ROWskill, String>("Fifth"));
+        six.setCellValueFactory(
+                new PropertyValueFactory<ROWskill, String>("Sixth"));
+
+        tabs.setItems(data);
+    }
+    private void TableFinder(Heroes hero, TableView<ROWskill> tabs, int selector){
+        if (hero.skills.get(selector).select("th").first().attr("style").equals(
+                    "color:#FFFFFF;font-weight:bold;background-color:#610804;min-width:590px;")){
+                SkillTable(hero, tabs, selector);
+        }
+        if (hero.skills.get(selector).select("th").first().attr("style").equals(
+                "color:#FFFFFF;font-weight:bold;background-color:#267396;")) {
+            SkillTableBUFF(hero, tabs, selector);
+        }
+        if (hero.skills.get(selector).select("th").first().attr("style").equals(
+                "color:#FFFFFF;font-weight:bold;background-color:#005C00;")) {
+            SkillTableHEAL(hero, tabs, selector);
+        }
     }
 
     @Override

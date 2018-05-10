@@ -13,12 +13,10 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.event.ActionEvent;
 import javafx.collections.FXCollections;
-
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.EventObject;
 import java.util.ResourceBundle;
 import javafx.collections.ObservableList;
 
@@ -46,31 +44,8 @@ public class Controller2 implements Initializable {
         public TableColumn<ROW, String> Stats;
 
     @FXML
-    public TableView<?> Skill;
+    public TableView<ROWskill> Skill;
 
-        @FXML
-        public TableColumn<?, ?> Column1;
-
-        @FXML
-        public TableColumn<?, ?> Column2;
-
-        @FXML
-        public TableColumn<?, ?> Column3;
-
-        @FXML
-        public TableColumn<?, ?> Column4;
-
-        @FXML
-        public TableColumn<?, ?> Column5;
-
-        @FXML
-        public TableColumn<?, ?> Column6;
-
-        @FXML
-        public TableColumn<?, ?> Column7;
-
-        @FXML
-        public TableColumn<?, ?> Column8;
 
     @FXML
     public Button SaveButton;
@@ -124,199 +99,34 @@ public class Controller2 implements Initializable {
     public CheckBox SkillCheck6;
 
     @FXML
-    public TableView<?> Skill1;
-
-        @FXML
-        public TableColumn<?, ?> Column11;
-
-        @FXML
-        public TableColumn<?, ?> Column21;
-
-        @FXML
-        public TableColumn<?, ?> Column31;
-
-        @FXML
-        public TableColumn<?, ?> Column41;
-
-        @FXML
-        public TableColumn<?, ?> Column51;
-
-        @FXML
-        public TableColumn<?, ?> Column61;
-
-        @FXML
-        public TableColumn<?, ?> Column71;
-
-        @FXML
-        public TableColumn<?, ?> Column81;
+    public TableView<ROWskill> Skill1;
 
     @FXML
     public TableView<?> Skill2;
 
-        @FXML
-        public TableColumn<?, ?> Column12;
-
-        @FXML
-        public TableColumn<?, ?> Column22;
-
-        @FXML
-        public TableColumn<?, ?> Column32;
-
-        @FXML
-        public TableColumn<?, ?> Column42;
-
-        @FXML
-        public TableColumn<?, ?> Column52;
-
-        @FXML
-        public TableColumn<?, ?> Column62;
-
-        @FXML
-        public TableColumn<?, ?> Column72;
-
-        @FXML
-        public TableColumn<?, ?> Column82;
-
     @FXML
     public TableView<?> Skill3;
-
-        @FXML
-        public TableColumn<?, ?> Column13;
-
-        @FXML
-        public TableColumn<?, ?> Column23;
-
-        @FXML
-        public TableColumn<?, ?> Column33;
-
-        @FXML
-        public TableColumn<?, ?> Column43;
-
-        @FXML
-        public TableColumn<?, ?> Column53;
-
-        @FXML
-        public TableColumn<?, ?> Column63;
-
-        @FXML
-        public TableColumn<?, ?> Column73;
-
-        @FXML
-        public TableColumn<?, ?> Column83;
 
     @FXML
     public TableView<?> Skill4;
 
-        @FXML
-        public TableColumn<?, ?> Column14;
-
-        @FXML
-        public TableColumn<?, ?> Column24;
-
-        @FXML
-        public TableColumn<?, ?> Column34;
-
-        @FXML
-        public TableColumn<?, ?> Column44;
-
-        @FXML
-        public TableColumn<?, ?> Column54;
-
-        @FXML
-        public TableColumn<?, ?> Column64;
-
-        @FXML
-        public TableColumn<?, ?> Column74;
-
-        @FXML
-        public TableColumn<?, ?> Column84;
-
     @FXML
     public TableView<?> Skill5;
-
-        @FXML
-        public TableColumn<?, ?> Column15;
-
-        @FXML
-        public TableColumn<?, ?> Column25;
-
-        @FXML
-        public TableColumn<?, ?> Column35;
-
-        @FXML
-        public TableColumn<?, ?> Column45;
-
-        @FXML
-        public TableColumn<?, ?> Column55;
-
-        @FXML
-        public TableColumn<?, ?> Column65;
-
-        @FXML
-        public TableColumn<?, ?> Column75;
-
-        @FXML
-        public TableColumn<?, ?> Column85;
 
     @FXML
     public TableView<?> Skill6;
 
-        @FXML
-        public TableColumn<?, ?> Column16;
-
-        @FXML
-        public TableColumn<?, ?> Column26;
-
-        @FXML
-        public TableColumn<?, ?> Column36;
-
-        @FXML
-        public TableColumn<?, ?> Column46;
-
-        @FXML
-        public TableColumn<?, ?> Column56;
-
-        @FXML
-        public TableColumn<?, ?> Column66;
-
-        @FXML
-        public TableColumn<?, ?> Column76;
-
-        @FXML
-        public TableColumn<?, ?> Column86;
-
     @FXML
     public TableView<?> Skill7;
 
-        @FXML
-        public TableColumn<?, ?> Column17;
-
-        @FXML
-        public TableColumn<?, ?> Column27;
-
-        @FXML
-        public TableColumn<?, ?> Column37;
-
-        @FXML
-        public TableColumn<?, ?> Column47;
-
-        @FXML
-        public TableColumn<?, ?> Column57;
-
-        @FXML
-        public TableColumn<?, ?> Column67;
-
-        @FXML
-        public TableColumn<?, ?> Column77;
-
-        @FXML
-        public TableColumn<?, ?> Column87;
-
-
     @FXML
     void LevelChange(ActionEvent event) throws IOException {
+        Skill.getColumns().clear();
+        Skill1.getColumns().clear();
         Heroes hero = new Heroes(Jank.getText());
         SetTable(hero, LevelBox.getValue());
+        SkillTable1(hero);
+        SkillTable2(hero);
     }
 
     @FXML
@@ -368,13 +178,13 @@ public class Controller2 implements Initializable {
         //setting labels
         this.HeroName.setText(hero.Base.select("tr").first().text());
         this.Jank.setText(name);
-        this.SkillName.setText(hero.skill1.select("tr").first().text());
-        this.SkillName1.setText(hero.skill2.select("tr").first().text());
-        this.SkillName2.setText(hero.skill3.select("tr").first().text());
-        this.SkillName3.setText(hero.skill4.select("tr").first().text());
-        this.SkillName4.setText(hero.skill5.select("tr").first().text());
-        this.SkillName5.setText(hero.skill6.select("tr").first().text());
-        this.SkillName6.setText(hero.skill7.select("tr").first().text());
+        this.SkillName.setText(hero.skills.get(1).select("tr").first().text());
+        this.SkillName1.setText(hero.skills.get(3).select("tr").first().text());
+        this.SkillName2.setText(hero.skills.get(5).select("tr").first().text());
+        this.SkillName3.setText(hero.skills.get(7).select("tr").first().text());
+        this.SkillName4.setText(hero.skills.get(9).select("tr").first().text());
+        this.SkillName5.setText(hero.skills.get(11).select("tr").first().text());
+        this.SkillName6.setText(hero.skills.get(13).select("tr").first().text());
 
         //setting label
         Image image = new Image(hero.Base.select("img").attr("src"));
@@ -399,6 +209,90 @@ public class Controller2 implements Initializable {
         Stats.setCellValueFactory(
                 new PropertyValueFactory<ROW, String>("level"));
         BaseStats.setItems(data);
+    }
+    public void SkillTable1(Heroes hero){
+        ArrayList<String> skill = Heroes.skillsListDamage(hero,1, 1 );
+        ArrayList<String> skill2 = Heroes.skillsListDamage(hero,2,1 );
+        ArrayList<String> skill3 = Heroes.skillsListDamage(hero,3,1 );
+        ArrayList<String> skill4 = Heroes.skillsListDamage(hero,4,1);
+        ArrayList<String> skill5 = Heroes.skillsListDamage(hero,5 ,1);
+        ArrayList<String> skill6 = Heroes.skillsListDamage(hero,6 ,1);
+        ArrayList<String> skill7 = Heroes.skillsListDamage(hero,7 ,1);
+        ArrayList<String> skill8 = Heroes.skillsListDamage(hero,8 ,1);
+
+        final ObservableList<ROWskill> data = FXCollections.observableArrayList();
+            ROWskill item = new ROWskill(skill.get(1), skill2.get(1), skill3.get(1), skill4.get(1), skill5.get(1), skill6.get(1), skill7.get(1), skill8.get(1));
+            data.add(item);
+        TableColumn one = new TableColumn(skill.get(0));
+        TableColumn two = new TableColumn(skill2.get(0));
+        TableColumn three = new TableColumn(skill3.get(0));
+        TableColumn four = new TableColumn(skill4.get(0));
+        TableColumn five = new TableColumn(skill5.get(0));
+        TableColumn six = new TableColumn(skill6.get(0));
+        TableColumn seven = new TableColumn(skill7.get(0));
+        TableColumn eight = new TableColumn(skill8.get(0));
+        Skill.getColumns().addAll(one, two, three, four, five, six, seven, eight);
+
+            one.setCellValueFactory(
+                    new PropertyValueFactory<ROWskill, String>("first"));
+            two.setCellValueFactory(
+                    new PropertyValueFactory<ROWskill, String>("Second"));
+            three.setCellValueFactory(
+                new PropertyValueFactory<ROWskill, String>("Third"));
+            four.setCellValueFactory(
+                new PropertyValueFactory<ROWskill, String>("Fourth"));
+            five.setCellValueFactory(
+                new PropertyValueFactory<ROWskill, String>("Fifth"));
+            six.setCellValueFactory(
+                new PropertyValueFactory<ROWskill, String>("Sixth"));
+            seven.setCellValueFactory(
+                new PropertyValueFactory<ROWskill, String>("Seventh"));
+            eight.setCellValueFactory(
+                new PropertyValueFactory<ROWskill, String>("Eighth"));
+            Skill.setItems(data);
+
+    }
+    public void SkillTable2(Heroes hero){
+        ArrayList<String> skill = Heroes.skillsListDamage(hero,1, 3 );
+        ArrayList<String> skill2 = Heroes.skillsListDamage(hero,2,3 );
+        ArrayList<String> skill3 = Heroes.skillsListDamage(hero,3,3 );
+        ArrayList<String> skill4 = Heroes.skillsListDamage(hero,4,3);
+        ArrayList<String> skill5 = Heroes.skillsListDamage(hero,5 ,3);
+        ArrayList<String> skill6 = Heroes.skillsListDamage(hero,6 ,3);
+        ArrayList<String> skill7 = Heroes.skillsListDamage(hero,7 ,3);
+        ArrayList<String> skill8 = Heroes.skillsListDamage(hero,8 ,3);
+
+        final ObservableList<ROWskill> data = FXCollections.observableArrayList();
+        ROWskill item = new ROWskill(skill.get(1), skill2.get(1), skill3.get(1), skill4.get(1), skill5.get(1), skill6.get(1), skill7.get(1), skill8.get(1));
+        data.add(item);
+        TableColumn one = new TableColumn(skill.get(0));
+        TableColumn two = new TableColumn(skill2.get(0));
+        TableColumn three = new TableColumn(skill3.get(0));
+        TableColumn four = new TableColumn(skill4.get(0));
+        TableColumn five = new TableColumn(skill5.get(0));
+        TableColumn six = new TableColumn(skill6.get(0));
+        TableColumn seven = new TableColumn(skill7.get(0));
+        TableColumn eight = new TableColumn(skill8.get(0));
+        Skill1.getColumns().addAll(one, two, three, four, five, six, seven, eight);
+
+        one.setCellValueFactory(
+                new PropertyValueFactory<ROWskill, String>("first"));
+        two.setCellValueFactory(
+                new PropertyValueFactory<ROWskill, String>("Second"));
+        three.setCellValueFactory(
+                new PropertyValueFactory<ROWskill, String>("Third"));
+        four.setCellValueFactory(
+                new PropertyValueFactory<ROWskill, String>("Fourth"));
+        five.setCellValueFactory(
+                new PropertyValueFactory<ROWskill, String>("Fifth"));
+        six.setCellValueFactory(
+                new PropertyValueFactory<ROWskill, String>("Sixth"));
+        seven.setCellValueFactory(
+                new PropertyValueFactory<ROWskill, String>("Seventh"));
+        eight.setCellValueFactory(
+                new PropertyValueFactory<ROWskill, String>("Eighth"));
+        Skill1.setItems(data);
+
     }
 
     @Override

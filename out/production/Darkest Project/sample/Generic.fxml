@@ -17,149 +17,72 @@
          <children>
             <Label fx:id="Jank" layoutX="58.0" layoutY="41.0" text="jank">
                <font>
-                  <Font size="5.0" />
+                  <Font size="1.0" />
                </font>
             </Label>
-            <ImageView fx:id="Portrait" fitHeight="100.0" fitWidth="109.0" layoutX="9.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
-            <ComboBox fx:id="LevelBox" layoutX="128.0" layoutY="74.0" onAction="#LevelChange" prefWidth="150.0" promptText="Resolve Level" visibleRowCount="5" />
-            <Label fx:id="HeroName" layoutX="128.0" layoutY="22.0" text="name">
+            <ImageView fx:id="Portrait" fitHeight="133.0" fitWidth="133.0" layoutX="2.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" />
+            <ComboBox fx:id="LevelBox" layoutX="143.0" layoutY="71.0" onAction="#LevelChange" prefHeight="31.0" prefWidth="142.0" promptText="Resolve Level" visibleRowCount="5" />
+            <Label fx:id="HeroName" layoutX="143.0" layoutY="27.0" text="name">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <TableView fx:id="BaseStats" layoutX="6.0" layoutY="107.0" prefHeight="461.0" prefWidth="123.0">
+            <TableView fx:id="BaseStats" layoutX="2.0" layoutY="118.0" prefHeight="516.0" prefWidth="123.0">
               <columns>
                 <TableColumn fx:id="Catagroy" prefWidth="64.79998922348022" />
                 <TableColumn fx:id="Stats" prefWidth="85.5999984741211" />
               </columns>
             </TableView>
-            <TableView fx:id="Skill" layoutX="139.0" layoutY="107.0" prefHeight="48.0" prefWidth="578.0">
-              <columns>
-                <TableColumn fx:id="Column1" prefWidth="58.4000244140625" />
-                <TableColumn fx:id="Column2" prefWidth="61.5999755859375" />
-                  <TableColumn fx:id="Column3" prefWidth="72.0" />
-                  <TableColumn fx:id="Column4" prefWidth="52.800048828125" />
-                  <TableColumn fx:id="Column5" prefWidth="69.5999755859375" />
-                  <TableColumn fx:id="Column6" prefWidth="53.5999755859375" />
-                  <TableColumn fx:id="Column7" prefWidth="107.19998168945312" />
-                  <TableColumn fx:id="Column8" prefWidth="98.4000244140625" />
-              </columns>
-            </TableView>
+            <TableView fx:id="Skill" layoutX="139.0" layoutY="107.0" prefHeight="65.0" prefWidth="578.0" />
             <Button fx:id="SaveButton" layoutX="580.0" layoutY="14.0" mnemonicParsing="false" onAction="#Save" text="Save" />
             <Button fx:id="LoadButton" layoutX="643.0" layoutY="14.0" mnemonicParsing="false" onAction="#Load" onMouseDragged="#Load" text="Load" />
-            <Label fx:id="SkillName" layoutX="416.0" layoutY="81.0" text="Skill">
+            <Label fx:id="SkillName" layoutX="380.0" layoutY="76.0" text="Skill">
                <font>
                   <Font size="18.0" />
                </font></Label>
-            <Label fx:id="SkillName1" layoutX="416.0" layoutY="155.0" text="Skill">
+            <Label fx:id="SkillName1" layoutX="380.0" layoutY="172.0" text="Skill">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label fx:id="SkillName2" layoutX="416.0" layoutY="230.0" text="Skill">
+            <Label fx:id="SkillName2" layoutX="380.0" layoutY="264.0" text="Skill">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label fx:id="SkillName3" layoutX="416.0" layoutY="305.0" text="Skill">
+            <Label fx:id="SkillName3" layoutX="380.0" layoutY="356.0" text="Skill">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label fx:id="SkillName4" layoutX="416.0" layoutY="380.0" text="Skill">
+            <Label fx:id="SkillName4" layoutX="380.0" layoutY="448.0" text="Skill">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label fx:id="SkillName5" layoutX="416.0" layoutY="455.0" text="Skill">
+            <Label fx:id="SkillName5" layoutX="380.0" layoutY="540.0" text="Skill">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label fx:id="SkillName6" layoutX="412.0" layoutY="530.0" text="Skill">
+            <Label fx:id="SkillName6" layoutX="380.0" layoutY="632.0" text="Skill">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <CheckBox fx:id="SkillCheck" layoutX="635.0" layoutY="86.0" mnemonicParsing="false" onAction="#Skill1Checked" />
-            <CheckBox fx:id="SkillCheck1" layoutX="635.0" layoutY="160.0" mnemonicParsing="false" onAction="#Skill2Checked" />
-            <CheckBox fx:id="SkillCheck2" layoutX="635.0" layoutY="235.0" mnemonicParsing="false" onAction="#Skill3Checked" />
-            <CheckBox fx:id="SkillCheck3" layoutX="635.0" layoutY="310.0" mnemonicParsing="false" onAction="#Skill4Checked" />
-            <CheckBox fx:id="SkillCheck4" layoutX="635.0" layoutY="385.0" mnemonicParsing="false" onAction="#Skill5Checked" />
-            <CheckBox fx:id="SkillCheck5" layoutX="634.0" layoutY="460.0" mnemonicParsing="false" onAction="#Skill6Checked" />
-            <CheckBox fx:id="SkillCheck6" layoutX="634.0" layoutY="535.0" mnemonicParsing="false" onAction="#Skill7Checked" />
-            <TableView fx:id="Skill1" layoutX="139.0" layoutY="182.0" prefHeight="48.0" prefWidth="578.0">
-               <columns>
-                  <TableColumn fx:id="Column11" prefWidth="58.4000244140625" />
-                  <TableColumn fx:id="Column21" prefWidth="61.5999755859375" />
-                  <TableColumn fx:id="Column31" prefWidth="72.0" />
-                  <TableColumn fx:id="Column41" prefWidth="52.800048828125" />
-                  <TableColumn fx:id="Column51" prefWidth="69.5999755859375" />
-                  <TableColumn fx:id="Column61" prefWidth="53.5999755859375" />
-                  <TableColumn fx:id="Column71" prefWidth="107.19998168945312" />
-                  <TableColumn fx:id="Column81" prefWidth="98.4000244140625" />
-               </columns>
-            </TableView>
-            <TableView fx:id="Skill2" layoutX="139.0" layoutY="257.0" prefHeight="48.0" prefWidth="578.0">
-               <columns>
-                  <TableColumn fx:id="Column12" prefWidth="58.4000244140625" />
-                  <TableColumn fx:id="Column22" prefWidth="61.5999755859375" />
-                  <TableColumn fx:id="Column32" prefWidth="72.0" />
-                  <TableColumn fx:id="Column42" prefWidth="52.800048828125" />
-                  <TableColumn fx:id="Column52" prefWidth="69.5999755859375" />
-                  <TableColumn fx:id="Column62" prefWidth="53.5999755859375" />
-                  <TableColumn fx:id="Column72" prefWidth="107.19998168945312" />
-                  <TableColumn fx:id="Column82" prefWidth="98.4000244140625" />
-               </columns>
-            </TableView>
-            <TableView fx:id="Skill3" layoutX="138.0" layoutY="332.0" prefHeight="48.0" prefWidth="578.0">
-               <columns>
-                  <TableColumn fx:id="Column13" prefWidth="58.4000244140625" />
-                  <TableColumn fx:id="Column23" prefWidth="61.5999755859375" />
-                  <TableColumn fx:id="Column33" prefWidth="72.0" />
-                  <TableColumn fx:id="Column43" prefWidth="52.800048828125" />
-                  <TableColumn fx:id="Column53" prefWidth="69.5999755859375" />
-                  <TableColumn fx:id="Column63" prefWidth="53.5999755859375" />
-                  <TableColumn fx:id="Column73" prefWidth="107.19998168945312" />
-                  <TableColumn fx:id="Column83" prefWidth="98.4000244140625" />
-               </columns>
-            </TableView>
-            <TableView fx:id="Skill4" layoutX="139.0" layoutY="407.0" prefHeight="48.0" prefWidth="578.0">
-               <columns>
-                  <TableColumn fx:id="Column14" prefWidth="58.4000244140625" />
-                  <TableColumn fx:id="Column24" prefWidth="61.5999755859375" />
-                  <TableColumn fx:id="Column34" prefWidth="72.0" />
-                  <TableColumn fx:id="Column44" prefWidth="52.800048828125" />
-                  <TableColumn fx:id="Column54" prefWidth="69.5999755859375" />
-                  <TableColumn fx:id="Column64" prefWidth="53.5999755859375" />
-                  <TableColumn fx:id="Column74" prefWidth="107.19998168945312" />
-                  <TableColumn fx:id="Column84" prefWidth="98.4000244140625" />
-               </columns>
-            </TableView>
-            <TableView fx:id="Skill5" layoutX="143.0" layoutY="482.0" prefHeight="48.0" prefWidth="578.0">
-               <columns>
-                  <TableColumn fx:id="Column15" prefWidth="58.4000244140625" />
-                  <TableColumn fx:id="Column25" prefWidth="61.5999755859375" />
-                  <TableColumn fx:id="Column35" prefWidth="72.0" />
-                  <TableColumn fx:id="Column45" prefWidth="52.800048828125" />
-                  <TableColumn fx:id="Column55" prefWidth="69.5999755859375" />
-                  <TableColumn fx:id="Column65" prefWidth="53.5999755859375" />
-                  <TableColumn fx:id="Column75" prefWidth="107.19998168945312" />
-                  <TableColumn fx:id="Column85" prefWidth="98.4000244140625" />
-               </columns>
-            </TableView>
-            <TableView fx:id="Skill6" layoutX="143.0" layoutY="557.0" prefHeight="48.0" prefWidth="578.0">
-               <columns>
-                  <TableColumn fx:id="Column16" prefWidth="58.4000244140625" />
-                  <TableColumn fx:id="Column26" prefWidth="61.5999755859375" />
-                  <TableColumn fx:id="Column36" prefWidth="72.0" />
-                  <TableColumn fx:id="Column46" prefWidth="52.800048828125" />
-                  <TableColumn fx:id="Column56" prefWidth="69.5999755859375" />
-                  <TableColumn fx:id="Column66" prefWidth="53.5999755859375" />
-                  <TableColumn fx:id="Column76" prefWidth="107.19998168945312" />
-                  <TableColumn fx:id="Column86" prefWidth="98.4000244140625" />
-               </columns>
-            </TableView>
+            <CheckBox fx:id="SkillCheck" layoutX="635.0" layoutY="79.0" mnemonicParsing="false" onAction="#Skill1Checked" />
+            <CheckBox fx:id="SkillCheck1" layoutX="634.0" layoutY="175.0" mnemonicParsing="false" onAction="#Skill2Checked" />
+            <CheckBox fx:id="SkillCheck2" layoutX="635.0" layoutY="267.0" mnemonicParsing="false" onAction="#Skill3Checked" />
+            <CheckBox fx:id="SkillCheck3" layoutX="635.0" layoutY="359.0" mnemonicParsing="false" onAction="#Skill4Checked" />
+            <CheckBox fx:id="SkillCheck4" layoutX="635.0" layoutY="451.0" mnemonicParsing="false" onAction="#Skill5Checked" />
+            <CheckBox fx:id="SkillCheck5" layoutX="634.0" layoutY="543.0" mnemonicParsing="false" onAction="#Skill6Checked" />
+            <CheckBox fx:id="SkillCheck6" layoutX="634.0" layoutY="635.0" mnemonicParsing="false" onAction="#Skill7Checked" />
+            <TableView fx:id="Skill1" layoutX="139.0" layoutY="199.0" prefHeight="65.0" prefWidth="578.0" />
+            <TableView fx:id="Skill2" layoutX="139.0" layoutY="291.0" prefHeight="65.0" prefWidth="578.0" />
+            <TableView fx:id="Skill3" layoutX="139.0" layoutY="383.0" prefHeight="65.0" prefWidth="578.0" />
+            <TableView fx:id="Skill4" layoutX="139.0" layoutY="475.0" prefHeight="65.0" prefWidth="578.0" />
+            <TableView fx:id="Skill5" layoutX="139.0" layoutY="567.0" prefHeight="65.0" prefWidth="578.0" />
+            <TableView fx:id="Skill6" layoutX="139.0" layoutY="659.0" prefHeight="65.0" prefWidth="578.0" />
          </children>
     </AnchorPane>
   </children>

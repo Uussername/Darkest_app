@@ -40,7 +40,7 @@ public class Main extends Application {
 
         Stage stage = new Stage();
         stage.setTitle(name);
-        stage.setScene(new Scene(root, 730, 630));
+        stage.setScene(new Scene(root, 730, 750));
         stage.setResizable(false);
         stage.show();
         return stage;

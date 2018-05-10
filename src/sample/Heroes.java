@@ -10,24 +10,12 @@ import java.util.ArrayList;
 
 public class Heroes {
     public Elements Base;
-    public Element skill1;
-    public Element skill2;
-    public Element skill3;
-    public Element skill4;
-    public Element skill5;
-    public Element skill6;
-    public Element skill7;
+    public Elements skills;
 
     public Heroes(String input) throws IOException {
         Document doc = Jsoup.connect("https://darkestdungeon.gamepedia.com/" + input).get();
         Base = doc.getElementsByClass("wikitable charactertable");
-        skill1 = doc.getElementsByClass("wikitable").get(1);
-        skill2 = doc.getElementsByClass("wikitable").get(3);
-        skill3 = doc.getElementsByClass("wikitable").get(5);
-        skill4 = doc.getElementsByClass("wikitable").get(7);
-        skill5 = doc.getElementsByClass("wikitable").get(9);
-        skill6 = doc.getElementsByClass("wikitable").get(11);
-        skill7 = doc.getElementsByClass("wikitable").get(13);
+        skills = doc.getElementsByClass("wikitable");
     }
     public static ArrayList<String> statList(Heroes hero, int y) {
         ArrayList<String> Catagories = new ArrayList<>();
@@ -53,6 +41,47 @@ public class Heroes {
         }
         return Catagories;
     }
+    public static ArrayList<String> skillsListDamage(Heroes hero, int y, int selector) {
+        ArrayList<String> Stuff = new ArrayList<>();
+        Stuff.add(hero.skills.get(selector).select("tr").get(1).select("td:eq(" + y + ")").text());
+        if (y == 2){
+            Stuff.add(RANK(hero, selector));
+        }
+        else{
+            Stuff.add(hero.skills.get(selector).select("tr").get(2).select("td:eq(" + (y + -1) + ")").text());
+        }
+
+        return Stuff;
+    }
+    public static ArrayList<String> SkillListBuff(Heroes hero, int selector) {
+        ArrayList<String> Stuff = new ArrayList<>();
+        Stuff.add(hero.skills.get(selector).select("tr").get(0).text());
+        System.out.println(hero.skills.get(selector).select("tr").get(0).text());
+        return Stuff;
+    }
+    public static ArrayList<String> SkillListHeal(Heroes hero, int selector) {
+        ArrayList<String> Stuff = new ArrayList<>();
+        Stuff.add(hero.skills.get(1).select("tr").get(0).text());
+        System.out.println(hero.skills.get(selector).select("tr").get(0).text());
+        return Stuff;
+    }
+    public static String RANK(Heroes hero, int selector) {
+        String places = "";
+        for (int x = 1; x < 5; x++) {
+            if (hero.skills.get(selector).select("img").get(x).attr("src").equals(
+                    "https://d1u5p3l4wpay3k.cloudfront.net/darkestdungeon_gamepedia/f/ff/Grey_dot.png?version=076bea2cedf423f5708d70126c4938ab")) {
+                places = places + "0";
+
+            }
+            if (hero.skills.get(selector).select("img").get(x).attr("src").equals(
+                    "https://d1u5p3l4wpay3k.cloudfront.net/darkestdungeon_gamepedia/f/fa/Yellow_dot.png?version=eb8a237b9baf3aa5ce018224176a00e9")) {
+                places = places + "1";
+            }
+        }
+            return places;
+        }
+
+
 }
 
 

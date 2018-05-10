@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/sample/ROWskill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Darkest Project/sample/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/sample/Controller2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Darkest Project/sample/Controller2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/sample/Generic.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Darkest Project/sample/Generic.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/sample/Heroes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Darkest Project/sample/Heroes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Controller2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Generic.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Generic.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Heroes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Heroes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -159,8 +149,8 @@
       <file leaf-file-name="Controller2.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/Controller2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="124" column="36" selection-start-line="124" selection-start-column="36" selection-end-line="124" selection-end-column="36" />
+            <state relative-caret-position="-1911">
+              <caret line="118" column="29" selection-start-line="118" selection-start-column="29" selection-end-line="118" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#8778#8779#0" expanded="true" />
@@ -212,6 +202,8 @@
       <find>skills</find>
       <find>Skill1ListDamage</find>
       <find>Skilltab</find>
+      <find>1</find>
+      <find>?</find>
     </findStrings>
     <replaceStrings>
       <replace>..</replace>
@@ -238,6 +230,8 @@
       <replace>skills</replace>
       <replace>skills.get(1)</replace>
       <replace>skillsListDamage</replace>
+      <replace>selector</replace>
+      <replace>ROWskill</replace>
     </replaceStrings>
   </component>
   <component name="FindManager">
@@ -478,7 +472,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -489,7 +482,7 @@
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50065106" side_tool="true" weight="0.27586207" />
       <window_info anchor="right" id="Maven Projects" order="4" />
       <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49934897" visible="true" weight="0.27586207" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49934897" weight="0.27586207" />
       <window_info anchor="bottom" id="Terminal" order="13" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="2" />
@@ -1054,8 +1047,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controller2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="124" column="36" selection-start-line="124" selection-start-column="36" selection-end-line="124" selection-end-column="36" />
+        <state relative-caret-position="-1911">
+          <caret line="118" column="29" selection-start-line="118" selection-start-column="29" selection-end-line="118" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#8778#8779#0" expanded="true" />

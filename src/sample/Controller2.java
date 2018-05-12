@@ -113,9 +113,6 @@ public class Controller2 implements Initializable {
     public CheckBox SkillCheck5;
 
     @FXML
-    public CheckBox SkillCheck7;
-
-    @FXML
     public CheckBox SkillCheck6;
 
     @FXML
@@ -168,56 +165,79 @@ public class Controller2 implements Initializable {
 
     @FXML
     void Save(ActionEvent event) {
-
+        int x = 0;
+        if (SkillCheck.isSelected()) {
+            x = x+1;
+        }
+        if (SkillCheck1.isSelected()) {
+            x = x+1;
+        }
+        if (SkillCheck2.isSelected()) {
+            x = x+1;
+        }
+        if (SkillCheck3.isSelected()) {
+            x = x+1;
+        }
+        if (SkillCheck4.isSelected()) {
+            x = x+1;
+        }
+        if (SkillCheck5.isSelected()) {
+            x = x+1;
+        }
+        if (SkillCheck6.isSelected()) {
+            x = x+1;
+        }
+        if (x > 4){
+            System.out.println("NO SOUP FOR YOU");
+            return;
+        }
+        else {
+            System.out.println("saved");
+        }
     }
 
     @FXML
     void Skill1Checked(ActionEvent event) throws IOException {
-        if (SkillCheck.isSelected()) {
-            Heroes hero = new Heroes(Jank.getText());
-            Prank1.setText(Heroes.RANKnum(hero, 1, 1).toString());
-            Prank2.setText(Heroes.RANKnum(hero, 1, 2).toString());
-            Prank3.setText(Heroes.RANKnum(hero, 1, 3).toString());
-            Prank4.setText(Heroes.RANKnum(hero, 1, 4).toString());
-
-
-            Ptarget1.setText(Heroes.RANK(hero, 1));
-        }
-        if (!SkillCheck.isSelected()){
-            Prank1.setText("");
-            Ptarget1.setText("");
-        }
+        Heroes hero = new Heroes(Jank.getText());
+        Checkboxed(SkillCheck, 1, hero);
     }
 
     @FXML
-    void Skill2Checked(ActionEvent event) {
-
+    void Skill2Checked(ActionEvent event) throws IOException {
+        Heroes hero = new Heroes(Jank.getText());
+        Checkboxed(SkillCheck1, 3, hero);
     }
 
     @FXML
-    void Skill3Checked(ActionEvent event) {
-
+    void Skill3Checked(ActionEvent event) throws IOException {
+        Heroes hero = new Heroes(Jank.getText());
+        Checkboxed(SkillCheck2, 5, hero);
     }
 
     @FXML
-    void Skill4Checked(ActionEvent event) {
-
+    void Skill4Checked(ActionEvent event) throws IOException {
+        Heroes hero = new Heroes(Jank.getText());
+        Checkboxed(SkillCheck3, 7, hero);
     }
 
     @FXML
-    void Skill5Checked(ActionEvent event) {
-
+    void Skill5Checked(ActionEvent event) throws IOException {
+        Heroes hero = new Heroes(Jank.getText());
+        Checkboxed(SkillCheck4, 9, hero);
     }
 
     @FXML
-    void Skill6Checked(ActionEvent event) {
-
+    void Skill6Checked(ActionEvent event) throws IOException {
+        Heroes hero = new Heroes(Jank.getText());
+        Checkboxed(SkillCheck5, 11, hero);
     }
 
     @FXML
-    void Skill7Checked(ActionEvent event) {
-
+    void Skill7Checked(ActionEvent event) throws IOException {
+        Heroes hero = new Heroes(Jank.getText());
+        Checkboxed(SkillCheck6, 13, hero);
     }
+
     public void SetValues(Heroes hero, String name) throws FileNotFoundException {
 
         //setting labels
@@ -371,6 +391,60 @@ public class Controller2 implements Initializable {
         if (hero.skills.get(selector).select("th").first().attr("style").equals(
                 "color:#FFFFFF;font-weight:bold;background-color:#005C00;")) {
             SkillTableHEAL(hero, tabs, selector);
+        }
+    }
+    private void Checkboxed(CheckBox box, int selector, Heroes hero) throws IOException {
+        if (box.isSelected()) {
+
+            Integer set = Heroes.RANKnum(hero, selector, 1) + Integer.parseInt(Prank1.getText());
+            Integer that = Heroes.RANKnum(hero, selector, 2) + Integer.parseInt(Prank2.getText());
+            Integer value = Heroes.RANKnum(hero, selector, 3) + Integer.parseInt(Prank3.getText());
+            Integer thing = Heroes.RANKnum(hero, selector, 4) + Integer.parseInt(Prank4.getText());
+
+            Integer A = Heroes.RANKtargetNUM(hero, selector, 5) + Integer.parseInt(Ptarget1.getText());
+            Integer B = Heroes.RANKtargetNUM(hero, selector, 6) + Integer.parseInt(Ptarget2.getText());
+            Integer C = Heroes.RANKtargetNUM(hero, selector, 7) + Integer.parseInt(Ptarget3.getText());
+            Integer D = Heroes.RANKtargetNUM(hero, selector, 8) + Integer.parseInt(Ptarget4.getText());
+
+            if (Integer.parseInt(Prank1.getText())== 4
+                    || Integer.parseInt(Prank2.getText()) == 4
+                    || Integer.parseInt(Prank3.getText()) == 4
+                    || Integer.parseInt(Prank4.getText()) == 4)
+            {
+                box.setSelected(false);
+                return;
+            }
+            else{
+                Prank1.setText(set.toString());
+                Prank2.setText(that.toString());
+                Prank3.setText(value.toString());
+                Prank4.setText(thing.toString());
+
+                Ptarget1.setText(A.toString());
+                Ptarget2.setText(B.toString());
+                Ptarget3.setText(C.toString());
+                Ptarget4.setText(D.toString());
+            }
+        }
+        if (!box.isSelected()) {
+            Integer have = Integer.parseInt(Prank1.getText()) - Heroes.RANKnum(hero, selector, 1);
+            Prank1.setText(have.toString());
+            Integer the = Integer.parseInt(Prank2.getText()) - Heroes.RANKnum(hero, selector, 2);
+            Prank2.setText(the.toString());
+            Integer best = Integer.parseInt(Prank3.getText()) - Heroes.RANKnum(hero, selector, 3);
+            Prank3.setText( best.toString());
+            Integer day = Integer.parseInt(Prank4.getText()) - Heroes.RANKnum(hero, selector, 4);
+            Prank4.setText(day.toString());
+
+            Integer E = Integer.parseInt(Ptarget1.getText()) - Heroes.RANKtargetNUM(hero, selector, 5);
+            Ptarget1.setText(E.toString());
+            Integer F = Integer.parseInt(Ptarget2.getText()) - Heroes.RANKtargetNUM(hero, selector, 6);
+            Ptarget2.setText(F.toString());
+            Integer G = Integer.parseInt(Ptarget3.getText()) - Heroes.RANKtargetNUM(hero, selector, 7);
+            Ptarget3.setText( G.toString());
+            Integer H = Integer.parseInt(Ptarget4.getText()) - Heroes.RANKtargetNUM(hero, selector, 8);
+            Ptarget4.setText(H.toString());
+
         }
     }
 

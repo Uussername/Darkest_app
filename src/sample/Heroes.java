@@ -158,6 +158,33 @@ public class Heroes {
             }
         return places;
     }
+    public static Integer RANKtargetNUM(Heroes hero, int selector, int x) {
+        int places = 0;
+        if (hero.skills.get(selector).select("span").first().text().equals("Self")) {
+            return places;
+        }
+        if (hero.skills.get(selector).select("img").get(x).attr("src").equals(
+                "https://d1u5p3l4wpay3k.cloudfront.net/darkestdungeon_gamepedia/f/ff/Grey_dot.png?version=076bea2cedf423f5708d70126c4938ab")) {
+            places = places + 0;
+        }
+        if (hero.skills.get(selector).select("img").get(x).attr("src").equals(
+                "https://d1u5p3l4wpay3k.cloudfront.net/darkestdungeon_gamepedia/7/78/Red_dot.png?version=3e045feb532a7fda9d2f824a00f470ac")) {
+            places = places + 1;
+        }
+        if (hero.skills.get(selector).select("img").get(x).attr("src").equals(
+                "https://d1u5p3l4wpay3k.cloudfront.net/darkestdungeon_gamepedia/1/1b/Red_dotr.png?version=7b7fcb669574a1356b7863cd6b691df3")) {
+            places = places + 1;
+        }
+        if (hero.skills.get(selector).select("img").get(x).attr("src").equals(
+                "https://d1u5p3l4wpay3k.cloudfront.net/darkestdungeon_gamepedia/0/0f/Red_dotl.png?version=f2ca7d56c985fb15a7e6da033b46fdf6")) {
+            places = places + 1;
+        }
+        if (hero.skills.get(selector).select("img").get(x).attr("src").equals(
+                "https://d1u5p3l4wpay3k.cloudfront.net/darkestdungeon_gamepedia/6/62/Red_dotlr.png?version=1fdff0f7564b1d712845a5791109fdd2")) {
+            places = places + 1;
+        }
+        return places;
+    }
 }
 
 

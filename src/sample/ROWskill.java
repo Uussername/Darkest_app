@@ -2,6 +2,11 @@ package sample;
 
 import javafx.beans.property.SimpleStringProperty;
 
+/**
+ * class used to format data into tables
+ * has an overloaded constructor based on skill type
+ * setting data for easy table creation
+ */
 public class ROWskill {
 
     private final SimpleStringProperty First;

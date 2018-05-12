@@ -19,101 +19,111 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.collections.ObservableList;
+import java.sql.*;
+
+/**
+ * Controller class for Generic.fxml
+ * Contains event methods for the GUI, methods on repeated code, and a method for the first Controller
+ */
 
 public class Controller2 implements Initializable {
+    /**
+     * initializing FX:id names
+     * Labels, ImageView, ComboBox, TableViews, CheckBoxes and Buttons
+     */
 
     @FXML
-    public ImageView Portrait;
+    private ImageView Portrait;
 
     @FXML
-    public ComboBox<Integer> LevelBox;
+    private ComboBox<Integer> LevelBox;
 
     @FXML
-    public Label HeroName;
+    private Label HeroName;
 
     @FXML
-    public Label Jank;
+    private Label Jank;
 
     @FXML
-    public TableView<ROW> BaseStats;
+    private TableView<ROW> BaseStats;
 
         @FXML
-        public TableColumn<ROW, String> Catagroy;
+        private TableColumn<ROW, String> Catagroy;
 
         @FXML
-        public TableColumn<ROW, String> Stats;
+        private TableColumn<ROW, String> Stats;
 
     @FXML
-    public Button SaveButton;
+    private Button SaveButton;
 
     @FXML
-    public Button LoadButton;
+    private Button LoadButton;
 
     @FXML
-    public Label SkillName;
+    private Label SkillName;
 
     @FXML
-    public Label SkillName1;
+    private Label SkillName1;
 
     @FXML
-    public Label SkillName2;
+    private Label SkillName2;
 
     @FXML
-    public Label SkillName3;
+    private Label SkillName3;
 
     @FXML
-    public Label SkillName4;
+    private Label SkillName4;
 
     @FXML
-    public Label SkillName5;
+    private Label SkillName5;
 
     @FXML
-    public Label SkillName6;
+    private Label SkillName6;
 
     @FXML
-    public Label Prank1;
+    private Label Prank1;
 
     @FXML
-    public Label Prank2;
+    private Label Prank2;
 
     @FXML
-    public Label Prank3;
+    private Label Prank3;
 
     @FXML
-    public Label Prank4;
+    private Label Prank4;
 
     @FXML
-    public Label Ptarget1;
+    private Label Ptarget1;
 
     @FXML
-    public Label Ptarget2;
+    private Label Ptarget2;
 
     @FXML
-    public Label Ptarget3;
+    private Label Ptarget3;
 
     @FXML
-    public Label Ptarget4;
+    private Label Ptarget4;
 
     @FXML
-    public CheckBox SkillCheck;
+    private CheckBox SkillCheck;
 
     @FXML
-    public CheckBox SkillCheck1;
+    private CheckBox SkillCheck1;
 
     @FXML
-    public CheckBox SkillCheck2;
+    private CheckBox SkillCheck2;
 
     @FXML
-    public CheckBox SkillCheck3;
+    private CheckBox SkillCheck3;
 
     @FXML
-    public CheckBox SkillCheck4;
+    private CheckBox SkillCheck4;
 
     @FXML
-    public CheckBox SkillCheck5;
+    private CheckBox SkillCheck5;
 
     @FXML
-    public CheckBox SkillCheck6;
+    private CheckBox SkillCheck6;
 
     @FXML
     private TableView<ROWskill> Skill;
@@ -136,6 +146,22 @@ public class Controller2 implements Initializable {
     @FXML
     private TableView<ROWskill> Skill6;
 
+    /**
+     * Occurs when the ComboBox in Generic.fxml is changed to a new value
+     * Clears all skill tables and recreates them
+     * (somewhat unfinished, all tables would ideally show different information per level
+     * not just he base stats table)
+     *
+     * @param event
+     * @throws IOException
+     * Clears Skill tableViews 0-6
+     * Creates a new Heroes object from the Label Jank
+     * Runs set table on Hero object to set the base stats based on the number in the combo box
+     * Runs TableFinder on Hero object, to fill the table in param,
+     *      with a prefound selector value to obtain the correct info
+     *
+     * Return
+     */
     @FXML
     void LevelChange(ActionEvent event) throws IOException {
         Skill.getColumns().clear();
@@ -155,7 +181,6 @@ public class Controller2 implements Initializable {
         TableFinder(hero, Skill4, 9);
         TableFinder(hero, Skill5, 11);
         TableFinder(hero, Skill6, 13);
-
     }
 
     @FXML
@@ -187,14 +212,37 @@ public class Controller2 implements Initializable {
         if (SkillCheck6.isSelected()) {
             x = x+1;
         }
-        if (x > 4){
+        if (x != 4){
             System.out.println("NO SOUP FOR YOU");
             return;
         }
         else {
             System.out.println("saved");
+
+            String DB_URL = "jdbc:mysql://db4free.net:3306/darkestdata";
+            String USER = "uuussername";
+            String PASSWORD = "rVYuw29!";
+            try {
+                Connection MyConn = DriverManager.getConnection(DB_URL, USER, PASSWORD);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            System.out.println("Connected");
         }
+
     }
+
+    /**
+     * Occurs when a skill box is checked, Same code is run on each Checkbox event
+     *
+     * @param event
+     * @throws IOException
+     *
+     * Create a new Heroes object from the label Jank
+     * Runs Checkboxed on corresponding checkbox per event with Heroes object and number of table
+     *
+     * Return
+     */
 
     @FXML
     void Skill1Checked(ActionEvent event) throws IOException {
@@ -238,11 +286,26 @@ public class Controller2 implements Initializable {
         Checkboxed(SkillCheck6, 13, hero);
     }
 
-    public void SetValues(Heroes hero, String name) throws FileNotFoundException {
+    /**
+     * A method for the Controller.java to set various labels based on the image clicked in Dark.fxml
+     *
+     * @param hero the table Elements of the web page being scrapped, an Object
+     * @param name name of the Hero that is being scrapped, used for URL endings
+     *
+     * Sets a title text to the name of the hero
+     * Sets a small hidden label to a specific string to be used to create more of the same object
+     * Sets each smaller table titles
+     * Sets the Hero image to that on their page
+     *
+     */
+
+    public void SetValues(Heroes hero, String name) {
 
         //setting labels
         this.HeroName.setText(hero.Base.select("tr").first().text());
+        // setting the important jank label
         this.Jank.setText(name);
+        // setting skill names
         this.SkillName.setText(hero.skills.get(1).select("tr").first().text());
         this.SkillName1.setText(hero.skills.get(3).select("tr").first().text());
         this.SkillName2.setText(hero.skills.get(5).select("tr").first().text());
@@ -257,9 +320,24 @@ public class Controller2 implements Initializable {
 
 
     }
-    public void SetTable(Heroes hero, int Num) {
-        ArrayList<String> FIRST = Heroes.statList(hero, 0);
-        ArrayList<String> SECOND = Heroes.statList2(hero, Num);
+
+    /**
+     * Sets the baseStats table on the left of the Generic.fxml
+     *
+     * @param hero object that contains site table elements
+     * @param Num the column of data to return
+     *
+     * creates 2 array lists, 1 for the row titles, 1 of actual data
+     * Creates an observableList of ROW object to be used creating the table
+     * for loop, 18 iterations
+     *             creates a ROW object of just a singular item of each ArrayList
+     *             adds them to the ObservableList
+     * Creates 2 cell factories and sets the table data
+     *
+     */
+    private void SetTable(Heroes hero, int Num) {
+        ArrayList<String> FIRST = Heroes.statList(hero, 0,0);
+        ArrayList<String> SECOND = Heroes.statList(hero, Num,1);
 
 
         final ObservableList<ROW> data = FXCollections.observableArrayList();
@@ -275,6 +353,20 @@ public class Controller2 implements Initializable {
                 new PropertyValueFactory<ROW, String>("level"));
         BaseStats.setItems(data);
     }
+
+    /**
+     * Similar to SetTable only for each skill, with up to 9 columns instead of 2
+     * @param hero elements of site
+     * @param tabs the TableView being edited
+     * @param selector skill table for hero
+     *
+     * creates 7 array lists, each for data
+     *      Creates an observableList of ROW object to be used creating the table
+     *      for loop, 18 iterations
+     *                  creates a ROWskill object of just a singular item of each ArrayList
+     *                  adds them to the ObservableList
+     *      Creates 7 cell factories and sets the table data
+     */
     private void SkillTable(Heroes hero, TableView<ROWskill> tabs, int selector){
         ArrayList<String> skill = Heroes.skillsListDamage(hero,1, selector );
         ArrayList<String> skill2 = Heroes.skillsListDamage(hero,2,selector );
@@ -318,6 +410,15 @@ public class Controller2 implements Initializable {
             tabs.setItems(data);
 
     }
+
+    /**
+     * Nearly identical to SkillTable, except the amount of lists and columns created is 4
+     *
+     * @param hero elements of site
+     * @param tabs the TableView being edited
+     * @param selector skill table for hero
+     *
+     */
     private void SkillTableBUFF(Heroes hero, TableView<ROWskill> tabs, int selector){
         ArrayList<String> skill = Heroes.SkillListBuff(hero,1, selector );
         ArrayList<String> skill2 = Heroes.SkillListBuff(hero,2,selector );
@@ -344,6 +445,14 @@ public class Controller2 implements Initializable {
                 new PropertyValueFactory<ROWskill, String>("Fourth"));
         tabs.setItems(data);
     }
+    /**
+     * Nearly identical to SkillTable, except the amount of lists and columns created is 6
+     *
+     * @param hero elements of site
+     * @param tabs the TableView being edited
+     * @param selector skill table for hero
+     *
+     */
     private void SkillTableHEAL(Heroes hero, TableView<ROWskill> tabs, int selector){
         ArrayList<String> skill = Heroes.SkillListBuff(hero,1, selector );
         ArrayList<String> skill2 = Heroes.SkillListBuff(hero,2,selector );
@@ -379,6 +488,16 @@ public class Controller2 implements Initializable {
 
         tabs.setItems(data);
     }
+
+    /**
+     * Finds the type of table method to run based on the color of the title of each table on the site
+     * SkillTable for red, SkillTableBUFF for blue, and SkillTableHEAL for green
+     *
+     * @param hero elements of site
+     * @param tabs the TableView being edited
+     * @param selector skill table for hero
+     *
+     */
     private void TableFinder(Heroes hero, TableView<ROWskill> tabs, int selector){
         if (hero.skills.get(selector).select("th").first().attr("style").equals(
                     "color:#FFFFFF;font-weight:bold;background-color:#610804;min-width:590px;")){
@@ -393,7 +512,27 @@ public class Controller2 implements Initializable {
             SkillTableHEAL(hero, tabs, selector);
         }
     }
-    private void Checkboxed(CheckBox box, int selector, Heroes hero) throws IOException {
+
+    /**
+     * Method for checkboxes to find ideal position and target
+     * takes the each of the Current Prank and Ptarget labels and adds or subtracts a value based
+     * on whether it was checked or unchecked
+     *
+     * @param box the checkbox
+     * @param selector number of skill table
+     * @param hero hero object to find data
+     *
+     * when being checked
+     *      finds the value of each rank and target from Ranknum and RANKtarget methods in Heroes
+     *      Checks to make sure non of the labels would increase in value over 4
+     *             if they would increase, prevent the checkbox from being checked
+     *             if not, change the labels to the new value
+     * when being unchecked
+     *      finds the value of each rank and target from Ranknum and RANKtarget methods in Heroes
+     *      subtracts the calculated value from the current label values
+     *      sets labels to new calculated value
+     */
+    private void Checkboxed(CheckBox box, int selector, Heroes hero) {
         if (box.isSelected()) {
 
             Integer set = Heroes.RANKnum(hero, selector, 1) + Integer.parseInt(Prank1.getText());
@@ -406,6 +545,7 @@ public class Controller2 implements Initializable {
             Integer C = Heroes.RANKtargetNUM(hero, selector, 7) + Integer.parseInt(Ptarget3.getText());
             Integer D = Heroes.RANKtargetNUM(hero, selector, 8) + Integer.parseInt(Ptarget4.getText());
 
+            //preventing label change
             if (Integer.parseInt(Prank1.getText())== 4
                     || Integer.parseInt(Prank2.getText()) == 4
                     || Integer.parseInt(Prank3.getText()) == 4
@@ -415,6 +555,8 @@ public class Controller2 implements Initializable {
                 return;
             }
             else{
+                //changing labels
+
                 Prank1.setText(set.toString());
                 Prank2.setText(that.toString());
                 Prank3.setText(value.toString());
@@ -427,6 +569,7 @@ public class Controller2 implements Initializable {
             }
         }
         if (!box.isSelected()) {
+            //finding values and subtracting from the label
             Integer have = Integer.parseInt(Prank1.getText()) - Heroes.RANKnum(hero, selector, 1);
             Prank1.setText(have.toString());
             Integer the = Integer.parseInt(Prank2.getText()) - Heroes.RANKnum(hero, selector, 2);
@@ -448,6 +591,13 @@ public class Controller2 implements Initializable {
         }
     }
 
+    /**
+     * initial startup of the window
+     * sets up the levelbox
+     *
+     * @param location a default for custom initialization
+     * @param resources a default for custom initialization
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         LevelBox.getItems().addAll(1, 2, 3, 4, 5);

@@ -1,7 +1,10 @@
 package sample;
 
 import javafx.beans.property.SimpleStringProperty;
-
+/**
+ * class used to format data into tables
+ * setting data for easy table creation
+ */
     public class ROW {
         private final SimpleStringProperty Catagory;
         private final SimpleStringProperty Level;

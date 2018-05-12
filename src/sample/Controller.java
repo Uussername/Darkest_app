@@ -7,10 +7,21 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-
+/**
+ * Controller for Dark.fxml mainly sets values for Controller2 based on which image was clicked
+ *
+ */
 public class Controller implements Initializable{
 
-
+    /**
+     * all methods are effectively identical
+     * When an image is clicked, will create a new Heros object and a new window tailored to the hero
+     * @param event
+     * @throws IOException
+     *
+     * Create new object
+     * run the new window command using the URL end tag and the Heroes object created
+     */
     @FXML
     void AbominationClick(MouseEvent event) throws IOException {
         Heroes Abomination = new Heroes("Abomination");

@@ -8,7 +8,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.event.ActionEvent;
 import javafx.collections.FXCollections;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -48,12 +47,6 @@ public class Controller2 implements Initializable {
 
         @FXML
         private TableColumn<ROW, String> Stats;
-
-    @FXML
-    private Button SaveButton;
-
-    @FXML
-    private Button LoadButton;
 
     @FXML
     private Label SkillName;
@@ -180,12 +173,7 @@ public class Controller2 implements Initializable {
     }
 
     @FXML
-    void Load(ActionEvent event) {
-
-    }
-
-    @FXML
-    void Save(ActionEvent event) {
+    void Save(ActionEvent event) throws SQLException {
         int x = 0;
         int A = 0, B = 0, C = 0, D = 0, E = 0, F = 0, G = 0 ;
         if (SkillCheck.isSelected()) {
@@ -217,10 +205,11 @@ public class Controller2 implements Initializable {
             G = 1;
         }
         if (x != 4){
-            Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.setTitle("Skill Warning");
-            alert.setHeaderText("Hero must have only 4 skills selected");
-            alert.showAndWait();
+            Error("Hero must have only 4 skills selected");
+            return;
+        }
+        if (LevelBox.getSelectionModel().isEmpty()) {
+            Error("Resolve level must be selected");
             return;
         }
         else {
@@ -231,14 +220,25 @@ public class Controller2 implements Initializable {
 
             Optional<String> result = dialog.showAndWait();
             if (result.isPresent()){
-                System.out.println("Your name: " + result.get());
-            }
+                if (result.toString().equals("Optional[]")){
+                    Error("Hero must have a name");
+                    return;
+                }
+                Connection Con = DBconnections.connect();
+                    if (DBconnections.UniqueSelect(Con, result).equals(false)){
+                        Error("Hero must have a UNIQUE name");
+                        return;
+                    }
+                    DBconnections.main(Con, Jank.getText(), result.get(),LevelBox.getValue(), A, B, C, D, E, F, G);
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Success");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Hero saved in database");
+                    alert.showAndWait();
+                }
             else {
                 return;
             }
-
-            DBconnections.main(Jank.getText(), result.get(),LevelBox.getValue(), A, B, C, D, E, F, G);
-            System.out.println("Finished");
         }
 
     }
@@ -600,6 +600,13 @@ public class Controller2 implements Initializable {
             Ptarget4.setText(H.toString());
 
         }
+    }
+    private void Error(String Error){
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        alert.setTitle("Error");
+        alert.setHeaderText(null);
+        alert.setContentText(Error);
+        alert.showAndWait();
     }
 
     /**

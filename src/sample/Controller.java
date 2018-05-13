@@ -1,11 +1,28 @@
 package sample;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
+import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
+import javafx.stage.Stage;
 
 /**
  * Controller for Dark.fxml mainly sets values for Controller2 based on which image was clicked
@@ -125,6 +142,41 @@ public class Controller implements Initializable{
     void VestalClick(MouseEvent event) throws IOException {
         Heroes Vestal = new Heroes("Vestal");
         Main.Window("Vestal", Vestal);
+    }
+
+    @FXML
+    void Load(ActionEvent event) throws SQLException {
+        Scene scene = new Scene(new Group());
+        Stage stage = new Stage();
+        TableView table = new TableView();
+
+        stage.setTitle("Table View Sample");
+        stage.setWidth(300);
+        stage.setHeight(500);
+
+        final Label label = new Label("Hero Roster");
+        label.setFont(new Font("Arial", 20));
+
+        table.setEditable(true);
+
+        TableColumn HeroClass = new TableColumn("Hero Class");
+        TableColumn HeroName = new TableColumn("Hero Name");
+        table.getColumns().addAll(HeroClass, HeroName);
+
+        final ObservableList<ROW> data = DBconnections.read(DBconnections.connect());
+        HeroClass.setCellValueFactory(new PropertyValueFactory<ROW, String>("Catagory"));
+        HeroName.setCellValueFactory(new PropertyValueFactory<ROW, String>("level"));
+        table.setItems(data);
+
+        final VBox vbox = new VBox();
+        vbox.setSpacing(5);
+        vbox.setPadding(new Insets(10, 0, 0, 10));
+        vbox.getChildren().addAll(label, table);
+
+        ((Group) scene.getRoot()).getChildren().addAll(vbox);
+
+        stage.setScene(scene);
+        stage.show();
     }
 
     @Override

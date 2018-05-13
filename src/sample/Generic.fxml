@@ -34,8 +34,7 @@
               </columns>
             </TableView>
             <TableView fx:id="Skill" layoutX="139.0" layoutY="107.0" prefHeight="65.0" prefWidth="578.0" />
-            <Button fx:id="SaveButton" layoutX="580.0" layoutY="14.0" mnemonicParsing="false" onAction="#Save" text="Save" />
-            <Button fx:id="LoadButton" layoutX="643.0" layoutY="14.0" mnemonicParsing="false" onAction="#Load" onMouseDragged="#Load" text="Load" />
+            <Button fx:id="SaveButton" layoutX="649.0" layoutY="11.0" mnemonicParsing="false" onAction="#Save" text="Save" />
             <Label fx:id="SkillName" layoutX="380.0" layoutY="76.0" text="Skill">
                <font>
                   <Font size="18.0" />

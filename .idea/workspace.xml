@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/DBconnections.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/sample/Controller2.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Controller2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Heroes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Heroes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/ROW.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/ROW.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/ROWskill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/ROWskill.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,24 +63,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Heroes.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Heroes.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Heroes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1802">
-              <caret line="110" column="36" selection-start-line="110" selection-start-column="36" selection-end-line="110" selection-end-column="36" />
+            <state>
+              <caret column="12" selection-start-column="12" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller2.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Controller2.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/Controller2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-156">
-              <caret line="339" column="64" lean-forward="true" selection-start-line="339" selection-start-column="64" selection-end-line="339" selection-end-column="64" />
+            <state relative-caret-position="220">
+              <caret line="234" column="13" selection-start-line="234" selection-start-column="13" selection-end-line="234" selection-end-column="13" />
               <folding>
-                <element signature="e#21595#21596#0" expanded="true" />
-                <element signature="e#21652#21653#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#22034#22035#0" expanded="true" />
+                <element signature="e#22091#22092#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DBconnections.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/DBconnections.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-33">
+              <caret line="35" column="50" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -98,7 +106,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Heroname</find>
       <find>Darkest_imports</find>
       <find>.Bain</find>
       <find>skill1</find>
@@ -123,14 +130,14 @@
       <find>.skillsListDamage</find>
       <find>Prank</find>
       <find>RANKnum</find>
-      <find>save</find>
       <find>public</find>
       <find>RankTarget</find>
       <find>skillList</find>
       <find>statlist</find>
+      <find>TEST_TABLE</find>
+      <find>save</find>
     </findStrings>
     <replaceStrings>
-      <replace>public</replace>
       <replace>Heroes</replace>
       <replace>skill8</replace>
       <replace>skill2</replace>
@@ -159,6 +166,7 @@
       <replace>.SkillListBuff</replace>
       <replace>Ptarget</replace>
       <replace>RANKtargetNUM</replace>
+      <replace>Darkest_Data</replace>
       <replace>private</replace>
     </replaceStrings>
   </component>
@@ -187,10 +195,11 @@
         <option value="$PROJECT_DIR$/src/sample/Generic.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
-        <option value="$PROJECT_DIR$/src/sample/Controller2.java" />
         <option value="$PROJECT_DIR$/src/sample/ROWskill.java" />
         <option value="$PROJECT_DIR$/src/sample/ROW.java" />
         <option value="$PROJECT_DIR$/src/sample/Heroes.java" />
+        <option value="$PROJECT_DIR$/src/sample/Controller2.java" />
+        <option value="$PROJECT_DIR$/src/sample/DBconnections.java" />
       </list>
     </option>
   </component>
@@ -406,12 +415,12 @@
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50130206" side_tool="true" weight="0.27586207" />
       <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4986979" visible="true" weight="0.27586207" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4986979" visible="true" weight="0.27586207" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Terminal" order="13" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.15755208" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.15755208" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="3" />
@@ -494,29 +503,12 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/sample/Controller2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3230">
-          <caret line="190" column="47" selection-start-line="190" selection-start-column="47" selection-end-line="190" selection-end-column="47" />
-          <folding>
-            <element signature="e#21595#21596#0" expanded="true" />
-            <element signature="e#21652#21653#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3774">
-          <caret line="248" column="59" lean-forward="true" selection-start-line="248" selection-start-column="59" selection-end-line="248" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller2.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5933">
           <caret line="367" column="36" selection-start-line="367" selection-start-column="36" selection-end-line="367" selection-end-column="36" />
           <folding>
-            <element signature="e#21595#21596#0" expanded="true" />
-            <element signature="e#21652#21653#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#22034#22035#0" expanded="true" />
+            <element signature="e#22091#22092#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -543,8 +535,9 @@
         <state relative-caret-position="68">
           <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
           <folding>
-            <element signature="e#21595#21596#0" expanded="true" />
-            <element signature="e#21652#21653#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#22034#22035#0" expanded="true" />
+            <element signature="e#22091#22092#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -578,8 +571,9 @@
         <state relative-caret-position="170">
           <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
           <folding>
-            <element signature="e#21595#21596#0" expanded="true" />
-            <element signature="e#21652#21653#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#22034#22035#0" expanded="true" />
+            <element signature="e#22091#22092#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -613,8 +607,9 @@
         <state relative-caret-position="170">
           <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
           <folding>
-            <element signature="e#21595#21596#0" expanded="true" />
-            <element signature="e#21652#21653#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#22034#22035#0" expanded="true" />
+            <element signature="e#22091#22092#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -645,8 +640,9 @@
         <state relative-caret-position="170">
           <caret line="18" column="27" lean-forward="true" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
           <folding>
-            <element signature="e#21595#21596#0" expanded="true" />
-            <element signature="e#21652#21653#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#22034#22035#0" expanded="true" />
+            <element signature="e#22091#22092#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -851,17 +847,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-156">
-          <caret line="339" column="64" lean-forward="true" selection-start-line="339" selection-start-column="64" selection-end-line="339" selection-end-column="64" />
-          <folding>
-            <element signature="e#21595#21596#0" expanded="true" />
-            <element signature="e#21652#21653#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/ROWskill.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -912,8 +897,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Heroes.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1802">
-          <caret line="110" column="36" selection-start-line="110" selection-start-column="36" selection-end-line="110" selection-end-column="36" />
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/mysql-connector-java-8.0.11/mysql-connector-java-8.0.11/mysql-connector-java-8.0.11.jar!/com/mysql/cj/jdbc/exceptions/SQLError.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/DBconnections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-33">
+          <caret line="35" column="50" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="234" column="13" selection-start-line="234" selection-start-column="13" selection-end-line="234" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#22034#22035#0" expanded="true" />
+            <element signature="e#22091#22092#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

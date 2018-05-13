@@ -2,12 +2,7 @@ package sample;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -17,6 +12,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import javafx.collections.ObservableList;
 import java.sql.*;
@@ -191,43 +187,58 @@ public class Controller2 implements Initializable {
     @FXML
     void Save(ActionEvent event) {
         int x = 0;
+        int A = 0, B = 0, C = 0, D = 0, E = 0, F = 0, G = 0 ;
         if (SkillCheck.isSelected()) {
             x = x+1;
+            A = 1;
         }
         if (SkillCheck1.isSelected()) {
             x = x+1;
+            B = 1;
         }
         if (SkillCheck2.isSelected()) {
             x = x+1;
+            C = 1;
         }
         if (SkillCheck3.isSelected()) {
             x = x+1;
+            D = 1;
         }
         if (SkillCheck4.isSelected()) {
             x = x+1;
+            E = 1;
         }
         if (SkillCheck5.isSelected()) {
             x = x+1;
+            F = 1;
         }
         if (SkillCheck6.isSelected()) {
             x = x+1;
+            G = 1;
         }
         if (x != 4){
-            System.out.println("NO SOUP FOR YOU");
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Skill Warning");
+            alert.setHeaderText("Hero must have only 4 skills selected");
+            alert.showAndWait();
             return;
         }
         else {
-            System.out.println("saved");
+            TextInputDialog dialog = new TextInputDialog("");
+            dialog.setTitle("Hero Name");
+            dialog.setHeaderText("Give your hero a unique name");
+            dialog.setContentText("Please name your hero:");
 
-            String DB_URL = "jdbc:mysql://db4free.net:3306/darkestdata";
-            String USER = "uuussername";
-            String PASSWORD = "rVYuw29!";
-            try {
-                Connection MyConn = DriverManager.getConnection(DB_URL, USER, PASSWORD);
-            } catch (SQLException e) {
-                e.printStackTrace();
+            Optional<String> result = dialog.showAndWait();
+            if (result.isPresent()){
+                System.out.println("Your name: " + result.get());
             }
-            System.out.println("Connected");
+            else {
+                return;
+            }
+
+            DBconnections.main(Jank.getText(), result.get(),LevelBox.getValue(), A, B, C, D, E, F, G);
+            System.out.println("Finished");
         }
 
     }

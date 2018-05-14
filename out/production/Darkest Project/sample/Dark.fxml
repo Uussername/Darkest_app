@@ -61,7 +61,7 @@
             </ImageView>
             <ImageView fx:id="imageHoundmaster" fitHeight="72.0" fitWidth="72.0" layoutX="284.0" layoutY="230.0" onMouseClicked="#HoundmasterClick" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../Images/Hound_master.png" />
+                  <Image url="@../Images/Houndmaster.png" />
                </image>
             </ImageView>
             <ImageView fx:id="imageArbalest" fitHeight="72.0" fitWidth="72.0" layoutX="34.0" layoutY="130.0" onMouseClicked="#ArbalestClick" pickOnBounds="true" preserveRatio="true">

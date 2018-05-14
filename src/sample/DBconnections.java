@@ -87,7 +87,7 @@ public class DBconnections {
     }
 
     /**
-     * searches the database for a hero and loads the values
+     * searches the database for a hero and loads the values of their skills and level into an arraylist to be referenced
      * @param MyConn database connection
      * @param name hero's name
      * @throws SQLException

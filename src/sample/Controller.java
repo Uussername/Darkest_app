@@ -146,13 +146,20 @@ public class Controller implements Initializable{
     @FXML
     private TableView table;
 
+    /**
+     * Load button event, creates a new window  a table of  all saved heroes
+     * a row can then be double clicked to load that hero's stats with Generic.fxml
+     * @param event
+     * @throws SQLException
+     * @throws IOException
+     */
     @FXML
     void Load(ActionEvent event) throws SQLException, IOException {
         Scene scene = new Scene(new Group());
         Stage stage = new Stage();
         table = new TableView();
 
-        stage.setTitle("Table View Sample");
+        stage.setTitle("Roster");
         stage.setWidth(300);
         stage.setHeight(500);
 
@@ -171,6 +178,14 @@ public class Controller implements Initializable{
         clicking(stage);
     }
 
+    /**
+     * Event for double clicking a row in the load window after clicking Load button
+     * Opens the hero selected in Generic.Fxml with all their saved skills and level then closes the table window
+     * @param primaryStage stage being worked with
+     * @throws SQLException
+     *
+     *
+     */
     public void clicking(Stage primaryStage) throws SQLException {
         TableView<ROW> table = new TableView<>();
         table.setRowFactory(tv -> {
@@ -178,20 +193,19 @@ public class Controller implements Initializable{
             row.setOnMouseClicked(event -> {
                 if (event.getClickCount() == 2 && (! row.isEmpty()) ) {
                     ROW rowData = row.getItem();
-                    System.out.println("Double click on: "+rowData.Catagory.get());// + rowData.Level);
                     try {
 
                         ArrayList<Integer> skills = DBconnections.select(DBconnections.connect(), rowData.Level.get());
                         Heroes hero = new Heroes(rowData.Catagory.get());
                         Main.load(rowData.Level.get(), hero, skills.get(0),skills.get(1), skills.get(2),
                                 skills.get(3), skills.get(4),skills.get(5), skills.get(6),skills.get(7));
-
+                        primaryStage.close();
                     } catch (IOException e) {
                         e.printStackTrace();
-                    } catch (SQLException e) {
+                    }
+                    catch (SQLException e) {
                         e.printStackTrace();
                     }
-
                 }
             });
             return row ;

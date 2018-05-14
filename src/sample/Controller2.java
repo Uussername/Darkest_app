@@ -229,11 +229,11 @@ public class Controller2 implements Initializable {
                         Error("Hero must have a UNIQUE name");
                         return;
                     }
-                    DBconnections.main(Con, Jank.getText(), result.get(),LevelBox.getValue(), A, B, C, D, E, F, G);
+                    DBconnections.insert(Con, Jank.getText(), result.get(),LevelBox.getValue(), A, B, C, D, E, F, G);
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("Success");
                     alert.setHeaderText(null);
-                    alert.setContentText("Hero saved in database");
+                    alert.setContentText("Hero saved inF database");
                     alert.showAndWait();
                 }
             else {
@@ -329,7 +329,66 @@ public class Controller2 implements Initializable {
         Image image = new Image(hero.Base.select("img").attr("src"));
         this.Portrait.setImage(image);
 
+    }
 
+    /**
+     * Much like SetValues but is used to load a hero, thus sets more values to effectively reload the program state
+     * runs several event methods to do this
+     *
+     * @param hero elements from webpage
+     * @param name name of the window used by SetValues
+     * @param level level number in combobox
+     * @param A Whether or not that checkbox was checked 1 true, 0 false
+     * @param B Whether or not that checkbox was checked 1 true, 0 false
+     * @param C Whether or not that checkbox was checked 1 true, 0 false
+     * @param D Whether or not that checkbox was checked 1 true, 0 false
+     * @param E Whether or not that checkbox was checked 1 true, 0 false
+     * @param F Whether or not that checkbox was checked 1 true, 0 false
+     * @param G Whether or not that checkbox was checked 1 true, 0 false
+     *
+     * checks each int value against its corrisponding combo box to see if it was checked
+     *          if it was, makes the combobox true and runs the event
+     * Sets the combobox
+     */
+    public void LoadingHero(Heroes hero, String name, int level, int A, int B, int C, int D, int E, int F, int G){
+        SetValues(hero, name);
+        if(A == 1) {
+            this.SkillCheck.setSelected(true);
+            Checkboxed(SkillCheck, 1, hero);
+        }
+        if(B == 1) {
+            this.SkillCheck1.setSelected(true);
+            Checkboxed(SkillCheck1, 3, hero);
+        }
+        if(C == 1) {
+            this.SkillCheck2.setSelected(true);
+            Checkboxed(SkillCheck2, 5, hero);
+        }
+        if(D == 1) {
+            this.SkillCheck3.setSelected(true);
+            Checkboxed(SkillCheck3, 7, hero);
+        }
+        if(E == 1) {
+            this.SkillCheck4.setSelected(true);
+            Checkboxed(SkillCheck4, 9, hero);
+        }
+        if(F == 1) {
+            this.SkillCheck5.setSelected(true);
+            Checkboxed(SkillCheck5, 11, hero);
+        }
+        if(G == 1) {
+            this.SkillCheck6.setSelected(true);
+            Checkboxed(SkillCheck6, 13, hero);
+        }
+        this.LevelBox.getSelectionModel().select(level-1);
+        SetTable(hero, LevelBox.getValue());
+        TableFinder(hero, this.Skill, 1);
+        TableFinder(hero, this.Skill1, 3);
+        TableFinder(hero, this.Skill2, 5);
+        TableFinder(hero, this.Skill3, 7);
+        TableFinder(hero, this.Skill4, 9);
+        TableFinder(hero, this.Skill5, 11);
+        TableFinder(hero, this.Skill6, 13);
     }
 
     /**
@@ -504,7 +563,7 @@ public class Controller2 implements Initializable {
      * Finds the type of table method to run based on the color of the title of each table on the site
      * SkillTable for red, SkillTableBUFF for blue, and SkillTableHEAL for green
      *
-     * @param hero elements of site
+     * @param hero elements from webpage
      * @param tabs the TableView being edited
      * @param selector skill table for hero
      *
@@ -531,7 +590,7 @@ public class Controller2 implements Initializable {
      *
      * @param box the checkbox
      * @param selector number of skill table
-     * @param hero hero object to find data
+     * @param hero elements from webpage
      *
      * when being checked
      *      finds the value of each rank and target from Ranknum and RANKtarget methods in Heroes

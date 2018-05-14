@@ -1,19 +1,18 @@
 package sample;
 
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.TableRow;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import java.io.IOException;
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
-import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -145,10 +144,13 @@ public class Controller implements Initializable{
     }
 
     @FXML
-    void Load(ActionEvent event) throws SQLException {
+    private TableView table;
+
+    @FXML
+    void Load(ActionEvent event) throws SQLException, IOException {
         Scene scene = new Scene(new Group());
         Stage stage = new Stage();
-        TableView table = new TableView();
+        table = new TableView();
 
         stage.setTitle("Table View Sample");
         stage.setWidth(300);
@@ -157,8 +159,43 @@ public class Controller implements Initializable{
         final Label label = new Label("Hero Roster");
         label.setFont(new Font("Arial", 20));
 
-        table.setEditable(true);
+        table.setEditable(false);
 
+        final VBox vbox = new VBox();
+        vbox.setSpacing(5);
+        vbox.setPadding(new Insets(10, 0, 0, 10));
+        vbox.getChildren().addAll(label, table);
+
+        ((Group) scene.getRoot()).getChildren().addAll(vbox);
+
+        clicking(stage);
+    }
+
+    public void clicking(Stage primaryStage) throws SQLException {
+        TableView<ROW> table = new TableView<>();
+        table.setRowFactory(tv -> {
+            TableRow<ROW> row = new TableRow<>();
+            row.setOnMouseClicked(event -> {
+                if (event.getClickCount() == 2 && (! row.isEmpty()) ) {
+                    ROW rowData = row.getItem();
+                    System.out.println("Double click on: "+rowData.Catagory.get());// + rowData.Level);
+                    try {
+
+                        ArrayList<Integer> skills = DBconnections.select(DBconnections.connect(), rowData.Level.get());
+                        Heroes hero = new Heroes(rowData.Catagory.get());
+                        Main.load(rowData.Level.get(), hero, skills.get(0),skills.get(1), skills.get(2),
+                                skills.get(3), skills.get(4),skills.get(5), skills.get(6),skills.get(7));
+
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+
+                }
+            });
+            return row ;
+        });
         TableColumn HeroClass = new TableColumn("Hero Class");
         TableColumn HeroName = new TableColumn("Hero Name");
         table.getColumns().addAll(HeroClass, HeroName);
@@ -168,15 +205,9 @@ public class Controller implements Initializable{
         HeroName.setCellValueFactory(new PropertyValueFactory<ROW, String>("level"));
         table.setItems(data);
 
-        final VBox vbox = new VBox();
-        vbox.setSpacing(5);
-        vbox.setPadding(new Insets(10, 0, 0, 10));
-        vbox.getChildren().addAll(label, table);
-
-        ((Group) scene.getRoot()).getChildren().addAll(vbox);
-
-        stage.setScene(scene);
-        stage.show();
+        Scene scene = new Scene(table);
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
 
     @Override

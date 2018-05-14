@@ -6,8 +6,8 @@ import javafx.beans.property.SimpleStringProperty;
  * setting data for easy table creation
  */
     public class ROW {
-        private final SimpleStringProperty Catagory;
-        private final SimpleStringProperty Level;
+        public final SimpleStringProperty Catagory;
+        public final SimpleStringProperty Level;
 
 
         public ROW(String first, String second) {

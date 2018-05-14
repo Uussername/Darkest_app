@@ -71,6 +71,49 @@ public class Main extends Application {
         stage.show();
         return stage;
     }
+
+    /**
+     * Neigh identical to Window except it runs LoadingHero instead of SetValues and takes more arguments
+     * for LoadingHero
+     * is used to load an already created hero
+     *
+     * @param hero elements from webpage
+     * @param name name of the window used by SetValues
+     * @param level level number in combobox
+     * @param A Whether or not that checkbox was checked 1 true, 0 false
+     * @param B Whether or not that checkbox was checked 1 true, 0 false
+     * @param C Whether or not that checkbox was checked 1 true, 0 false
+     * @param D Whether or not that checkbox was checked 1 true, 0 false
+     * @param E Whether or not that checkbox was checked 1 true, 0 false
+     * @param F Whether or not that checkbox was checked 1 true, 0 false
+     * @param G Whether or not that checkbox was checked 1 true, 0 false
+     *
+     * loads Generic.fxml
+     * Sets controller of Generic.fxml to Controller2.java
+     *
+     * creates in instance of Controller2 so that the LoadingHero method can be used
+     *
+     * sets stage size, title, and prevents resizing
+     *
+     * @return the stage created
+     * @throws IOException
+     */
+    public static Stage load(String name, Heroes hero, int level, int A, int B, int C, int D, int E, int F, int G) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(MethodHandles.lookup().lookupClass().getResource("Generic.fxml"));
+        fxmlLoader.setController(new Controller2());
+        Parent root = fxmlLoader.load();
+
+        Controller2 cont = fxmlLoader.getController();
+        cont.LoadingHero(hero, name, level, A, B, C, D, E, F, G);
+
+        Stage stage = new Stage();
+        stage.setTitle(name);
+        stage.setScene(new Scene(root, 730, 750));
+        stage.setResizable(false);
+        stage.show();
+        return stage;
+    }
+
 }
 
 

@@ -197,7 +197,7 @@ public class Controller implements Initializable{
 
                         ArrayList<Integer> skills = DBconnections.select(DBconnections.connect(), rowData.Level.get());
                         Heroes hero = new Heroes(rowData.Catagory.get());
-                        Main.load(rowData.Level.get(), hero, skills.get(0),skills.get(1), skills.get(2),
+                        Main.load(rowData.Catagory.get(), hero, skills.get(0),skills.get(1), skills.get(2),
                                 skills.get(3), skills.get(4),skills.get(5), skills.get(6),skills.get(7));
                         primaryStage.close();
                     } catch (IOException e) {

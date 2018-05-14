@@ -233,7 +233,7 @@ public class Controller2 implements Initializable {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("Success");
                     alert.setHeaderText(null);
-                    alert.setContentText("Hero saved inF database");
+                    alert.setContentText("Hero saved into database");
                     alert.showAndWait();
                 }
             else {

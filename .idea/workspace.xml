@@ -7,30 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Darkest_Project_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Darkest Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Darkest Project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/images/Abomination.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/images/Antiquarian.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/images/Arbalest.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/images/Bounty_Hunter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/images/Crusader.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/images/Darkest_Dungeon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/images/Flagellant.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/images/Grave_robber.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/images/Hellion.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/images/Highwayman.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/images/Hound_master.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/images/Jester.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/images/Leper.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/images/Man-at-arms.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/images/Occultist.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/images/Plague_doctor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/images/Shieldbreaker.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/images/Vestal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Darkest Project/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Darkest Project/sample/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Dark.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Dark.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Controller2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller2.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -88,11 +66,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Heroes.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Heroes.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1218">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="204" column="21" selection-start-line="204" selection-start-column="21" selection-end-line="204" selection-end-column="21" />
+            <state relative-caret-position="239">
+              <caret line="199" column="50" selection-start-line="199" selection-start-column="50" selection-end-line="199" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -100,21 +87,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Dark.fxml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sample/Dark.fxml">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="63" column="61" lean-forward="true" selection-start-line="63" selection-start-column="61" selection-end-line="63" selection-end-column="61" />
+            <state relative-caret-position="290">
+              <caret line="106" column="31" lean-forward="true" selection-start-line="106" selection-start-column="31" selection-end-line="106" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
-      <file leaf-file-name="Controller2.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Controller2.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/Controller2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="302" column="18" selection-start-line="302" selection-start-column="7" selection-end-line="302" selection-end-column="18" />
+            <state relative-caret-position="201">
+              <caret line="235" column="57" selection-start-line="235" selection-start-column="57" selection-end-line="235" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#22987#22988#0" expanded="true" />
@@ -147,7 +136,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>second</find>
       <find>portrait</find>
       <find>Skill1</find>
       <find>skills</find>
@@ -177,6 +165,7 @@
       <find>setTable</find>
       <find>@param hero</find>
       <find>table</find>
+      <find>INFORMATIon</find>
     </findStrings>
     <replaceStrings>
       <replace>Eighth</replace>
@@ -236,11 +225,11 @@
         <option value="$PROJECT_DIR$/src/sample/Heroes.java" />
         <option value="$PROJECT_DIR$/src/sample/Generic.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
-        <option value="$PROJECT_DIR$/src/sample/Controller2.java" />
         <option value="$PROJECT_DIR$/src/sample/ROW.java" />
         <option value="$PROJECT_DIR$/src/sample/DBconnections.java" />
-        <option value="$PROJECT_DIR$/src/sample/Controller.java" />
         <option value="$PROJECT_DIR$/src/sample/Dark.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/Controller.java" />
+        <option value="$PROJECT_DIR$/src/sample/Controller2.java" />
       </list>
     </option>
   </component>
@@ -327,15 +316,16 @@
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\thoantj\OneDrive - dunwoody.edu\Advanced Programing\Projects\Darkest Project\src\sample" />
+      <recent name="C:\Users\thoantj\IdeaProjects\untitled\src\sample" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\thoantj\OneDrive - dunwoody.edu\Advanced Programing\Projects\Darkest Project\out\production\Darkest Project\Images" />
       <recent name="C:\Users\thoantj\OneDrive - dunwoody.edu\Advanced Programing\Projects\Darkest Project\src\sample" />
       <recent name="C:\Users\thoantj\OneDrive - dunwoody.edu\Advanced Programing\Projects\Darkest Project\out\production\Darkest Project" />
       <recent name="C:\Users\thoantj\OneDrive - dunwoody.edu\Advanced Programing\Projects\Darkest Project\out\production\Darkest Project\sample\images" />
       <recent name="C:\Users\thoantj\OneDrive - dunwoody.edu\Advanced Programing\Projects\Darkest Project\src" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\thoantj\OneDrive - dunwoody.edu\Advanced Programing\Projects\Darkest Project\src\sample" />
-      <recent name="C:\Users\thoantj\IdeaProjects\untitled\src\sample" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -456,12 +446,12 @@
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50130206" side_tool="true" weight="0.27586207" />
       <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4986979" visible="true" weight="0.27586207" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4986979" visible="true" weight="0.27586207" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Terminal" order="13" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.15755208" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.15755208" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -868,13 +858,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Heroes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Generic.fxml">
       <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
@@ -883,16 +866,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="100" column="60" lean-forward="true" selection-start-line="100" selection-start-column="60" selection-end-line="100" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -910,6 +883,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Images/Abomination.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Dark.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="73" column="34" selection-start-line="73" selection-start-column="34" selection-end-line="73" selection-end-column="34" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/DBconnections.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1359">
@@ -920,10 +904,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Heroes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1218">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="106" column="31" lean-forward="true" selection-start-line="106" selection-start-column="31" selection-end-line="106" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="199" column="50" selection-start-line="199" selection-start-column="50" selection-end-line="199" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controller2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="302" column="18" selection-start-line="302" selection-start-column="7" selection-end-line="302" selection-end-column="18" />
+        <state relative-caret-position="201">
+          <caret line="235" column="57" selection-start-line="235" selection-start-column="57" selection-end-line="235" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#22987#22988#0" expanded="true" />
@@ -931,27 +942,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Images/Abomination.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="204" column="21" selection-start-line="204" selection-start-column="21" selection-end-line="204" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Dark.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="63" column="61" lean-forward="true" selection-start-line="63" selection-start-column="61" selection-end-line="63" selection-end-column="61" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
   </component>
   <component name="masterDetails">
